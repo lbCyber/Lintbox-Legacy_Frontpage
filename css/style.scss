@@ -1,0 +1,58 @@
+@import 'partials/normalize';
+
+$heebo: Heebo, sans-serif;
+$special: Special Elite, serif;
+
+$darkGrey: #3b3b3f;
+$faintBlue: #9c97c8;
+$faintGrey: #A3B2C4;
+$darkSlate: #484a5f;
+$lightBlue: #48A0F0;
+$amber: #e99b36;
+
+html {
+  font: 125% $heebo;
+}
+
+body {
+  background-color: $darkGrey;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width:100%;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  color: $lightBlue;
+  font-size:5rem;
+}
+
+h2 {
+  color: #fff;
+  font-size: 4rem;
+}
+
+h3 {
+  color: $amber;
+}
+
+.mainNavItem, .navText {
+  color: $lightBlue;
+  text-transform: lowercase;
+  font-size:1.4rem;
+}
+
+.titleList {
+  color: $faintBlue;
+  text-transform: uppercase;
+}
