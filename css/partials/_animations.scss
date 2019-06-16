@@ -1,0 +1,82 @@
+/*  ANIMATION KEYFRAMES  */
+
+@keyframes bubble {
+  0% {
+    left:110px;
+    bottom:-30px;
+    opacity:1;
+    background-image: radial-gradient(ellipse at 100% 0%, transparent, rgba(255, 255, 255, 1));
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+  16% {
+    left:155px;
+    bottom:30px;
+  }
+  33% {
+    left:110px;
+    bottom:90px;
+  }
+  50% {
+    left:150px;
+    bottom:150px;
+    border: 1px solid rgba(255, 255, 255, .6);
+  }
+  66% {
+    left:110px;
+    bottom:210px;
+  }
+  83% {
+    left:150px;
+    bottom:270px;
+    background-image: radial-gradient(ellipse at 20% 80%, transparent, rgba(255, 255, 255, .3));
+    opacity:1;
+  }
+  100% {
+    left:125px;
+    bottom:330px;
+    opacity:0;
+    border: 1px solid rgba(255, 255, 255, .5);
+  }
+}
+
+@keyframes titles {
+  0% {
+    top: 245px;    
+  }
+  12% {
+    top: 245px;
+  }
+  16% {
+    top: 164px;
+  }
+  28% {
+    top: 164px;
+  }
+  34% {
+    top: 83px;
+  }
+  46% {
+    top: 83px;
+  }
+  50% {
+    top: 2px;
+  }
+  62% {
+    top: 2px;
+  }
+  66% {
+    top: -79px;
+  }
+  78% {
+    top: -79px;
+  }
+  82% {
+    top: -160px;
+  }
+  96% {
+    top: -160px;
+  }
+  100% {
+    top: -242px;
+  }
+}

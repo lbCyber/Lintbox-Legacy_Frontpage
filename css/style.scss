@@ -50,11 +50,19 @@ h3 {
 
 header {
   height: 100vh;
+  position: relative;
+}
+
+.headerBackgroundWrapper {
+  height: 100%;
+  width: 100%;
+  filter: blur(8px);
   background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/mePic.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: absolute;
+  z-index: -1;
 }
 
 button,
@@ -181,7 +189,14 @@ button,
   margin-top: 14px;
   ul {
     position: relative;
-    top: 222px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: titles infinite forwards 20s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -207,3 +222,112 @@ button,
   border: 4px solid #48a0f0;
   text-shadow: 0px 3px 8px black;
 }
+
+.avContainer {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: 10px solid white;
+  border-radius: 150px;
+  overflow: hidden;
+  background-color: $darkSlate;
+}
+
+.axoLogo {
+  position: relative;
+  right: 0;
+}
+
+.axolotl {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/axologosmile.svg");
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 100;
+}
+
+/*  BUBBLES */
+
+.bubbles {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 50%;
+  z-index: 0;
+  animation-name: bubble;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.bub1 {
+  transform: translate(75px, -30px);
+  width: 15px;
+  height: 15px;
+  animation-delay: 0.3s;
+  animation-duration: 0.7s;
+  z-index: 200;
+}
+
+.bub2 {
+  transform: translate(-54px, -15px);
+  width: 24px;
+  height: 24px;
+  animation-delay: 0.2s;
+  animation-duration: 0.8s;
+}
+
+.bub3 {
+  transform: translate(-15px, 18px);
+  width: 45px;
+  height: 45px;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  z-index: 200;
+}
+
+.bub4 {
+  transform: translate(33px, 6px);
+  width: 24px;
+  height: 24px;
+  animation-delay: 0.4s;
+  animation-duration: 0.9s;
+}
+
+.bub5 {
+  transform: translate(-36px, -48px);
+  width: 36px;
+  height: 36px;
+  animation-delay: 0.4s;
+  animation-duration: 1.1s;
+}
+
+.bub6 {
+  transform: translate(-66px, 30px);
+  width: 18px;
+  height: 18px;
+  animation-delay: 0.2s;
+  animation-duration: 0.7s;
+  z-index: 200;
+}
+
+.bub7 {
+  transform: translate(45px, 6px);
+  width: 66px;
+  height: 66px;
+  animation-delay: 0.2s;
+  animation-duration: 1.1s;
+}
+
+.bub8 {
+  transform: translate(-6px, -18px);
+  width: 21px;
+  height: 21px;
+  animation-delay: 0s;
+  animation-duration: 0.9s;
+}
+
+@import "partials/animations";
