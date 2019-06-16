@@ -181,7 +181,8 @@ html {
 
 body {
   background-color: #3b3b3f;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #fff; }
 
 a {
   text-decoration: none;
@@ -206,7 +207,15 @@ h3 {
   text-transform: uppercase; }
 
 header {
-  height: 100vh; }
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3b3b3f), to(#3b3b3f)), url("./../assets/mePic.jpg");
+  background-image: -webkit-linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/mePic.jpg");
+  background-image: -o-linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/mePic.jpg");
+  background-image: linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/mePic.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
 
 button,
 .mainNavItem,
@@ -215,10 +224,6 @@ button,
   color: #48a0f0;
   text-transform: lowercase;
   font-size: 1.4rem; }
-
-.titleList {
-  color: #9c97c8;
-  text-transform: uppercase; }
 
 .wrapper {
   max-width: 1280px;
@@ -270,7 +275,10 @@ button,
 .navText {
   font-size: 0.8rem;
   width: 40%;
-  text-align: right; }
+  text-align: right;
+  position: absolute;
+  bottom: 40px;
+  right: 40px; }
 
 .socialButtons {
   font-size: 1.2rem; }
@@ -278,6 +286,21 @@ button,
     margin: 0 10px; }
   .socialButtons a:last-child {
     margin-left: 10px; }
+
+.headerContainer {
+  height: calc(100% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .headerTextContainer {
   display: -webkit-box;
@@ -292,24 +315,88 @@ button,
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  height: 300px; }
-  .headerTextContainer h2, .headerTextContainer h3, .headerTextContainer .titleList {
-    height: calc(100% / 3);
-    width: 33%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+  height: 300px;
+  width: 100%;
+  margin-top: 10%; }
   .headerTextContainer h1 {
     height: calc(200% / 3);
-    width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: end;
     -ms-flex-align: end;
-    align-items: flex-end; }
+    align-items: flex-end;
+    width: 400px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-left: 50px; }
+  .headerTextContainer h2 {
+    width: 500px; }
+  .headerTextContainer h2,
   .headerTextContainer h3 {
-    text-align: right; }
+    height: calc(100% / 3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 50px; }
+  .headerTextContainer h3 {
+    text-align: right;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-size: 2rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 450px; }
+
+.titleList {
+  color: #9c97c8;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50px;
+  padding: 20px;
+  position: relative;
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 70px;
+  margin-left: 50px;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 14px; }
+  .titleList ul {
+    position: relative;
+    top: 222px; }
+
+.fadeBorder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  border-radius: 50px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(33%, transparent), to(#000));
+  background-image: -webkit-linear-gradient(#000 0%, transparent 33% 67%, #000 100%);
+  background-image: -o-linear-gradient(#000 0%, transparent 33% 67%, #000 100%);
+  background-image: linear-gradient(#000 0%, transparent 33% 67%, #000 100%);
+  z-index: 1; }
+
+.learnMore {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - (250px / 2));
+  width: 250px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 4px solid #48a0f0;
+  text-shadow: 0px 3px 8px black; }
