@@ -51,6 +51,16 @@ h3 {
 header {
   height: 100vh;
   position: relative;
+  background: linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/mePic.jpg");
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-size: auto, auto;
+  background-blend-mode: multiply;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  overflow:hidden;
+  min-height:768px;
 }
 
 .headerBackgroundWrapper {
@@ -129,45 +139,42 @@ button,
 }
 
 .headerContainer {
-  height: calc(100% - 100px);
+  height: calc(100% - 250px);
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height:485px;
 }
 
-.headerTextContainer {
+.headerText {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
-  height: 300px;
-  width: 100%;
-  margin-top: 10%;
-  h1 {
-    height: calc(200% / 3);
-    display: flex;
-    align-items: flex-end;
-    width: 400px;
-    align-self: flex-start;
-    margin-left: 50px;
-  }
+  width: 1100px;
+  h1,
   h2 {
     width: 500px;
-  }
-  h2,
-  h3 {
-    height: calc(100% / 3);
     display: flex;
     align-items: center;
     padding-left: 50px;
   }
+}
+
+.headerTitles {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   h3 {
     text-align: right;
     align-self: flex-end;
     font-size: 2rem;
     justify-content: flex-end;
-    width: 450px;
+    width: 550px;
   }
 }
 
@@ -184,8 +191,6 @@ button,
   display: flex;
   align-items: center;
   height: 70px;
-  margin-left: 50px;
-  align-self: flex-start;
   margin-top: 14px;
   ul {
     position: relative;
@@ -235,6 +240,82 @@ button,
   border-radius: 150px;
   overflow: hidden;
   background-color: $darkSlate;
+  background-repeat: no-repeat;
+}
+
+.paulAv {
+  background-image: url("./../assets/meAvSkeleton.png");
+  background-size: 100%;
+  background-position: 50%;
+  img {
+    opacity: 1;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 0.1;
+      transition: opacity 3.5s 1s;
+    }
+  }
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionText {
+  background-color: rgba(163, 178, 196, 0.2);
+  width: 70%;
+  border-radius: 20px;
+  padding: 30px;
+  scrollbar-color: rgba(255,255,255,.4) transparent;
+  scrollbar-width: thin;
+  height:70vh;
+  max-height: 1000px;
+  min-height: 485px;
+  overflow-y:auto;
+  h4 {
+    font-family: $special;
+    font-size: 3rem;
+  }
+  h5 {
+    font-family: $special;
+    color: $lightBlue;
+    font-size:1.5rem;
+    margin: 40px 0 15px;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    opacity:0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color:rgba(255,255,255,.4);
+    border-radius:25px;
+  }
+}
+
+section {
+  padding: 80px 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height:768px;
+}
+
+.about {
+  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/matchBack.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @import "partials/animations";
