@@ -182,7 +182,8 @@ html {
 body {
   background-color: #3b3b3f;
   font-size: 1rem;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
 
 a {
   text-decoration: none;
@@ -205,6 +206,16 @@ h2 {
 h3 {
   color: #e99b36;
   text-transform: uppercase; }
+
+h4 {
+  font-family: Special Elite, serif;
+  font-size: 3rem; }
+
+h5 {
+  font-family: Special Elite, serif;
+  color: #48a0f0;
+  font-size: 1.5rem;
+  margin: 40px 0 15px; }
 
 header {
   height: 100vh;
@@ -475,33 +486,32 @@ button,
   justify-content: space-between; }
 
 .sectionText {
+  height: 70vh;
+  max-height: 1000px;
+  min-height: 485px;
+  width: 70%; }
+
+.sectionText,
+.portGallery {
   background-color: rgba(163, 178, 196, 0.2);
-  width: 70%;
   border-radius: 20px;
   padding: 30px;
   scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
   scrollbar-width: thin;
-  height: 70vh;
-  max-height: 1000px;
-  min-height: 485px;
   overflow-y: auto; }
-  .sectionText h4 {
-    font-family: Special Elite, serif;
-    font-size: 3rem; }
-  .sectionText h5 {
-    font-family: Special Elite, serif;
-    color: #48a0f0;
-    font-size: 1.5rem;
-    margin: 40px 0 15px; }
-  .sectionText p {
+  .sectionText p,
+  .portGallery p {
     font-size: 1.2rem;
     line-height: 1.5rem;
     margin-bottom: 1rem; }
-  .sectionText::-webkit-scrollbar {
+  .sectionText::-webkit-scrollbar,
+  .portGallery::-webkit-scrollbar {
     width: 1rem; }
-  .sectionText::-webkit-scrollbar-track {
+  .sectionText::-webkit-scrollbar-track,
+  .portGallery::-webkit-scrollbar-track {
     opacity: 0; }
-  .sectionText::-webkit-scrollbar-thumb {
+  .sectionText::-webkit-scrollbar-thumb,
+  .portGallery::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 25px; }
 
@@ -520,6 +530,34 @@ section {
   position: relative;
   min-height: 768px; }
 
+.iconGallery {
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .iconGallery img {
+    width: 90px;
+    height: 90px;
+    padding: 10px 15px;
+    -webkit-transition: width 0.5s, height 0.5s, margin 0.5s;
+    -o-transition: width 0.5s, height 0.5s, margin 0.5s;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    margin: 10px 0; }
+    .iconGallery img:hover {
+      width: 110px;
+      height: 110px;
+      margin: 0; }
+
 .about {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3b3b3f), to(#3b3b3f)), url("./../assets/matchBack.jpg");
   background-image: -webkit-linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/matchBack.jpg");
@@ -529,6 +567,80 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
+
+.portGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.portItem {
+  width: 30%;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3); }
+  .portItem h5 {
+    text-align: center; }
+  .portItem p {
+    padding: 15px;
+    font-size: 1rem; }
+
+.sectionTitle {
+  color: #48a0f0;
+  position: absolute;
+  font-size: 10rem;
+  opacity: 0.1;
+  z-index: 0;
+  top: 5%;
+  text-shadow: 0 0 10px #000;
+  right: 5%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default; }
+
+footer {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: 0;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  letter-spacing: .5rem;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 40px;
+  opacity: 0.6;
+  padding: 0;
+  position: absolute;
+  -webkit-transition: padding 0.5s, height 0.5s, opacity 0.5s;
+  -o-transition: padding 0.5s, height 0.5s, opacity 0.5s;
+  transition: padding 0.5s, height 0.5s, opacity 0.5s;
+  cursor: default; }
+  footer p {
+    margin: 0; }
+  footer:hover {
+    height: 80px;
+    padding: 10px 0;
+    opacity: 1; }
+    footer:hover a {
+      color: #48a0f0;
+      text-decoration: underline; }
 
 /*  BUBBLES */
 .axoLogo {
