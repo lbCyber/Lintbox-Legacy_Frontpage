@@ -3,12 +3,12 @@
 $heebo: Heebo, sans-serif;
 $special: Special Elite, serif;
 
-$darkGrey: #3b3b3f;
-$faintBlue: #9c97c8;
-$faintGrey: #a3b2c4;
-$darkSlate: #484a5f;
-$lightBlue: #48a0f0;
-$amber: #e99b36;
+$darkGrey: #3b3b3f; //     rgba(59,59,63,1.000)
+$faintBlue: #9c97c8; //    rgba(156,151,200,1.000)
+$faintGrey: #a3b2c4; //    rgba(163,178,196,1.000)
+$darkSlate: #484a5f; //    rgba(72,74,95,1.000)
+$lightBlue: #48a0f0; //    rgba(72,160,240,1.000)
+$amber: #e99b36; //        rgba(233,155,54,1.000)
 
 html {
   font: 125% $heebo;
@@ -18,12 +18,15 @@ body {
   background-color: $darkGrey;
   font-size: 1rem;
   color: #fff;
-  position:relative;
+  position: relative;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    color: $amber;
+  }
 }
 
 img {
@@ -130,6 +133,11 @@ button,
     border-radius: 20px;
     text-align: center;
   }
+  li:hover a {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: $amber;
+    border: 1px solid $amber;
+  }
 }
 
 .navText {
@@ -162,12 +170,44 @@ button,
   min-height: 485px;
 }
 
+.centerHeaderItems {
+  display: flex;
+  width: 1000px;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.myPicContainer {
+  width: 350px;
+  margin-right: 100px;
+  position: relative;
+}
+
+.backgroundStyle {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(25deg, #3b3b3f 0% 30%, transparent 30% 100%),
+    linear-gradient(65deg, #484a5f 0% 30%, transparent 30% 100%),
+    linear-gradient(90deg, #48a0f0 0% 42%, transparent 42% 100%),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 103% 65%;
+  opacity:.5;
+}
+
 .headerText {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   flex-wrap: wrap;
-  width: 1100px;
+  width: 500px;
   h1,
   h2 {
     width: 500px;
@@ -243,6 +283,11 @@ button,
   border-radius: 50px;
   border: 4px solid #48a0f0;
   text-shadow: 0px 3px 8px black;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e99b36;
+    border-color: #e99b36;
+  }
 }
 
 .avContainer {
@@ -376,18 +421,18 @@ section {
   top: 5%;
   text-shadow: 0 0 10px #000;
   right: 5%;
-  user-select:none;
-  cursor:default;
+  user-select: none;
+  cursor: default;
 }
 
 footer {
   align-items: center;
   bottom: 0;
-  color: #FFF;
+  color: #fff;
   display: flex;
   font-size: 1rem;
   justify-content: center;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   overflow: hidden;
   text-transform: uppercase;
   width: 100%;
@@ -398,7 +443,7 @@ footer {
   padding: 0;
   position: absolute;
   transition: padding 0.5s, height 0.5s, opacity 0.5s;
-  cursor:default;
+  cursor: default;
   p {
     margin: 0;
   }
@@ -411,6 +456,42 @@ footer {
       text-decoration: underline;
     }
   }
+}
+
+.skills {
+  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/codeBack.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.portfolio {
+  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/workBack.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*
+
+	SKIP BOX
+
+*/
+
+.skipbox {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: -1000px;
+  z-index: 999;
+  border-width: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 200px;
+}
+
+.skipbox:focus {
+  top: 0px;
 }
 
 @import "partials/animations";

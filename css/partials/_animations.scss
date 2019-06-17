@@ -3,12 +3,15 @@
 .axoLogo {
   position: relative;
   right: 0;
+  background-image: url("../assets/axologosmile.svg");
+  background-size:0;
+  background-repeat:no-repeat;
 }
 
 .axolotl {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/axologosmile.svg");
+  background-image: url("../assets/axologo.svg");
   background-size: 250px;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,14 +20,27 @@
   z-index: 100;
 }
 
+
+  .axoLogo:hover .axolotl {
+    background-image: url("../assets/axologosmile.svg");
+    transform:rotate(1deg);
+    background-size:251px;
+    transition: background-size .6s cubic-bezier(.5, 10, .5, 10), transform .6s cubic-bezier(.5, -5, .5, 5);
+  }
+
 .bubbles {
   opacity: 0;
   position: absolute;
   bottom: 0px;
   border-radius: 50%;
   z-index: 0;
-  animation: bubble infinite forwards;
 }
+
+  .axoLogo:hover .bubbles {
+    animation-name:bubble;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+  }
 
 .bub1 {
   transform: translate(75px, -30px);
