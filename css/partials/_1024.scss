@@ -1,0 +1,66 @@
+@media screen and (max-width: 1024px) {
+
+.wrapper {
+  max-width: 1024px;
+}
+
+.mainNav ul {
+  width: 95%;
+}
+
+.centerHeaderItems {
+  width: 100%;
+  height: 410px;
+  justify-content: space-around;
+}
+
+.myPicContainer {
+  margin: unset;
+  img {
+    height:400px;
+    object-fit:cover;
+    width:300px;
+  }
+}
+
+.headerText {
+  width: 100%;
+  margin-right: 20px;
+  h2 {
+    font-size: 3.5rem;
+    &:nth-child(2) {
+      line-height:60px;
+    }
+  }
+  h1 {
+    font-size:4.5rem;
+  }
+}
+
+.headerTitles {
+  width:100%;
+  justify-content: flex-end;
+  h3 {
+    width: unset;
+    margin-right: 20px;
+  }
+}
+
+.titleList {
+  width: 480px;
+}
+
+.avContainer {
+  width: 225px;
+  height: 225px;
+}
+
+.portItem {
+  width: 90%;
+}
+
+.featureList {
+  width: 70%;
+}
+
+}
