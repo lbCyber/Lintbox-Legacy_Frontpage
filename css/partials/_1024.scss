@@ -21,7 +21,7 @@
 .centerHeaderItems {
   width: 100%;
   height: 410px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .myPicContainer {
@@ -38,8 +38,8 @@
 }
 
 .headerText {
-  width: 100%;
-  margin-right: 20px;
+  width:400px;
+  margin-right: 120px;
   h2 {
     font-size: 3.5rem;
     &:nth-child(2) {
