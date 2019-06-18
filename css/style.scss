@@ -20,6 +20,21 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
 
 /*  BASE STYLES */
 
+* {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-track {
+    opacity: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+  }
+}
+
 html {
   font: 125% $heebo;
 }
@@ -114,6 +129,7 @@ button,
 .sectionContainer {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .sectionText {
@@ -145,6 +161,7 @@ section {
   right: 5%;
   user-select: none;
   cursor: default;
+  z-index:0;
 }
 
 /*	SKIP BOX  */
@@ -428,7 +445,7 @@ header {
 .iconGallery {
   height: 220px;
   display: flex;
-  width: 100%;
+  width: 780px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -460,19 +477,7 @@ header {
 .sectionText,
 .portGallery,
 .portText {
-  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
-  scrollbar-width: thin;
   overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 1rem;
-  }
-  &::-webkit-scrollbar-track {
-    opacity: 0;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 25px;
-  }
 }
 
 .sectionText,
