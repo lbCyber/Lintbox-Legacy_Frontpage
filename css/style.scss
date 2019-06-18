@@ -1,7 +1,15 @@
+/*  BASE IMPORTS  */
+
 @import "partials/normalize";
+
+//  VARIABLES
+
+//..  FONTS
 
 $heebo: Heebo, sans-serif;
 $special: Special Elite, serif;
+
+//..  COLOURS
 
 $darkGrey: #3b3b3f; //     rgba(59,59,63,1.000)
 $faintBlue: #9c97c8; //    rgba(156,151,200,1.000)
@@ -9,6 +17,8 @@ $faintGrey: #a3b2c4; //    rgba(163,178,196,1.000)
 $darkSlate: #484a5f; //    rgba(72,74,95,1.000)
 $lightBlue: #48a0f0; //    rgba(72,160,240,1.000)
 $amber: #e99b36; //        rgba(233,155,54,1.000)
+
+/*  BASE STYLES */
 
 html {
   font: 125% $heebo;
@@ -31,6 +41,7 @@ a {
 
 img {
   width: 100%;
+  display:block;
 }
 
 ul {
@@ -71,6 +82,89 @@ h6 {
   color: $lightBlue;
 }
 
+/*  COMMON ELEMENTS */
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 768;
+}
+
+button,
+.mainNavItem,
+.navText,
+.learnMore {
+  color: $lightBlue;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+}
+.avContainer {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: 10px solid white;
+  border-radius: 150px;
+  overflow: hidden;
+  background-color: $darkSlate;
+  background-repeat: no-repeat;
+  margin:0 auto;
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sectionText {
+  height: 70vh;
+  max-height: 1000px;
+  min-height: 485px;
+  width: 70%;
+}
+
+section {
+  padding: 80px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  color: $lightBlue;
+  position: absolute;
+  font-size: 10rem;
+  opacity: 0.1;
+  z-index: 0;
+  top: 5%;
+  text-shadow: 0 0 10px #000;
+  right: 5%;
+  user-select: none;
+  cursor: default;
+}
+
+/*	SKIP BOX  */
+
+.skipbox {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: -1000px;
+  z-index: 999;
+  border-width: 3px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 200px;
+}
+
+.skipbox:focus {
+  top: 0px;
+}
+
+/*  HEADER  */
+
 header {
   height: 100vh;
   position: relative;
@@ -96,22 +190,6 @@ header {
   background-position: center;
   position: absolute;
   z-index: -1;
-}
-
-button,
-.mainNavItem,
-.navText,
-.learnMore {
-  color: $lightBlue;
-  text-transform: lowercase;
-  font-size: 1.4rem;
-}
-
-.wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 768;
 }
 
 .mainNav {
@@ -168,7 +246,7 @@ button,
 }
 
 .headerContainer {
-  height: calc(100% - 250px);
+  height: calc(100% - 100px);
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -184,15 +262,21 @@ button,
   position: relative;
   justify-content: flex-end;
   align-items: center;
-  border: 3px solid #fff;
+  border: 3px solid $lightBlue;
   border-radius: 5px;
   overflow: hidden;
+  h2 {
+    z-index: 5;
+  }
 }
 
 .myPicContainer {
-  width: 350px;
-  margin-right: 100px;
+  margin-right: 50px;
   position: relative;
+  img {
+    border-radius:0 350px 0 0;
+    box-shadow: 0px 20px 0 25px $lightBlue;
+  }
 }
 
 .backgroundStyle {
@@ -200,14 +284,12 @@ button,
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(25deg, $darkGrey 0% 30%, transparent 30% 100%),
-    linear-gradient(65deg, $darkSlate 0% 30%, transparent 30% 100%),
-    linear-gradient(90deg, $lightBlue 0% 42%, transparent 42% 100%),
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    linear-gradient(-190deg, $lightBlue 0 40%, transparent 40% 100%);
-  background-attachment: fixed;
+  background-image: linear-gradient(-25deg, $darkGrey 0% 27.85%, transparent 28% 100%),
+    linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%),
+    linear-gradient(-80deg, rgba(163,178,196,.45) 0% 34.85%, transparent 35% 100%),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   background-repeat: no-repeat;
-  background-size: 103% 65%;
+  background-size: 100%;
   opacity: 0.5;
 }
 
@@ -227,6 +309,7 @@ button,
 }
 
 .headerTitles {
+  margin-top:20px;
   width: 1000px;
   display: flex;
   justify-content: space-between;
@@ -282,9 +365,6 @@ button,
 }
 
 .learnMore {
-  position: absolute;
-  bottom: 20px;
-  left: calc(50% - (250px / 2));
   width: 250px;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.2);
@@ -292,6 +372,7 @@ button,
   border-radius: 50px;
   border: 4px solid #48a0f0;
   text-shadow: 0px 3px 8px black;
+  margin-top:5%;
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #e99b36;
@@ -299,16 +380,7 @@ button,
   }
 }
 
-.avContainer {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  border: 10px solid white;
-  border-radius: 150px;
-  overflow: hidden;
-  background-color: $darkSlate;
-  background-repeat: no-repeat;
-}
+/*  ABOUT */
 
 .paulAv {
   background-image: url("./../assets/meAvSkeleton.png");
@@ -324,17 +396,54 @@ button,
   }
 }
 
-.sectionContainer {
-  display: flex;
-  justify-content: space-between;
+.about {
+  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/matchBack.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.sectionText {
-  height: 70vh;
-  max-height: 1000px;
-  min-height: 485px;
-  width: 70%;
+.aboutText a {
+  color: $lightBlue;
+  &:hover {
+    color: $amber;
+  }
 }
+
+/*  SKILLS  */
+
+.iconGallery {
+  height: 250px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  img {
+    width: 90px;
+    height: 90px;
+    padding: 10px 15px;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    margin: 10px 0;
+    &:hover {
+      width: 110px;
+      height: 110px;
+      margin: 0;
+    }
+  }
+}
+
+.skills {
+  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/codeBack.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/*  PORTFOLIO */
 
 .sectionText,
 .portGallery,
@@ -366,46 +475,6 @@ button,
   }
 }
 
-section {
-  padding: 80px 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  min-height: 100vh;
-}
-
-.iconGallery {
-  height: 250px;
-  display: flex;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  img {
-    width: 90px;
-    height: 90px;
-    padding: 10px 15px;
-    transition: width 0.5s, height 0.5s, margin 0.5s;
-    margin: 10px 0;
-    &:hover {
-      width: 110px;
-      height: 110px;
-      margin: 0;
-    }
-  }
-}
-
-.about {
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/matchBack.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 .portGallery {
   display: flex;
   flex-wrap: wrap;
@@ -429,71 +498,18 @@ section {
   }
 }
 
-.sectionTitle {
-  color: $lightBlue;
-  position: absolute;
-  font-size: 10rem;
-  opacity: 0.1;
-  z-index: 0;
-  top: 5%;
-  text-shadow: 0 0 10px #000;
-  right: 5%;
-  user-select: none;
-  cursor: default;
-}
-
-footer {
-  align-items: center;
-  bottom: 0;
-  color: #fff;
-  display: flex;
-  font-size: 1rem;
-  justify-content: center;
-  letter-spacing: 0.5rem;
-  overflow: hidden;
-  text-transform: uppercase;
-  width: 100%;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 40px;
-  opacity: 0.6;
-  padding: 0;
-  position: absolute;
-  transition: padding 0.5s, height 0.5s, opacity 0.5s;
-  cursor: default;
-  p {
-    margin: 0;
-  }
-  &:hover {
-    height: 80px;
-    padding: 10px 0;
-    opacity: 1;
-    a {
-      color: $lightBlue;
-      text-decoration: underline;
-    }
-  }
-}
-
-.skills {
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/codeBack.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
 .portfolio {
   background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/workBack.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding-bottom:60px;
 }
 
 .portImage {
   height: 250px;
-  position:relative;
+  position: relative;
   img {
     object-fit: cover;
     height: 250px;
@@ -502,22 +518,22 @@ footer {
 }
 
 .siteLink {
-  opacity:0;
-  transition: opacity .5s;
-  top:0;
-  position:absolute;
-  width:100%;
-  height:100%;
-  background-color: rgba(70,70,80,.85);
-  z-index:1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-shadow:0 0 20px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(70, 70, 80, 0.85);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .portImage:hover .siteLink {
-  opacity:1;
+  opacity: 1;
 }
 
 .portText {
@@ -533,10 +549,10 @@ footer {
   width: 250px;
   margin: 0 auto;
   h6 {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  text-align:center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -554,24 +570,46 @@ footer {
   font-size: 0.9rem;
 }
 
-/*
+/*  FOOTER  */
 
-	SKIP BOX
-
-*/
-
-.skipbox {
-  position: absolute;
-  left: calc(50% - 100px);
-  top: -1000px;
+footer {
+  align-items: center;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  font-size: .8rem;
+  justify-content: center;
+  letter-spacing: 0.3rem;
+  overflow: hidden;
+  text-transform: uppercase;
+  width: 100%;
   z-index: 999;
-  border-width: 3px;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 30px;
+  opacity: 0.6;
+  padding: 0;
+  position: absolute;
+  transition: padding 0.5s, height 0.5s, opacity 0.5s;
+  cursor: default;
+  p {
+    margin: 0;
+  }
+  &:hover {
+    height: 60px;
+    padding: 10px 0;
+    opacity: 1;
+    a {
+      color: $lightBlue;
+      text-decoration: underline;
+    }
+  }
 }
 
-.skipbox:focus {
-  top: 0px;
-}
+/*  OVERRIDE/RESPONSIVENESS/ANIMATION IMPORTS  */
 
 @import "partials/animations";
+@import "partials/1600";
+@import "partials/1280";
+@import "partials/1024";
+@import "partials/768";
+@import "partials/420";
