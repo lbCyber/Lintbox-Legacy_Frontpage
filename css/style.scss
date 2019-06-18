@@ -208,7 +208,8 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  li a, li button {
+  li a,
+  li button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,12 +219,18 @@ header {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
     text-align: center;
-    border:none;
+    border: none;
   }
-  li:hover a, li:hover button {
+  li:hover a,
+  li:hover button {
     background-color: rgba(255, 255, 255, 0.2);
     color: $amber;
     border: 1px solid $amber;
+  }
+  h4 {
+    color: $lightBlue;
+    font-size: 2rem;
+    margin:0 10px;
   }
 }
 
@@ -238,6 +245,9 @@ header {
 
 .socialButtons {
   font-size: 1.2rem;
+  a {
+    transition: color 0.5s;
+  }
   a:not(:last-child) {
     margin: 0 10px;
   }
@@ -374,6 +384,7 @@ header {
   border: 4px solid #48a0f0;
   text-shadow: 0px 3px 8px black;
   margin-top: 5%;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #e99b36;
@@ -415,9 +426,9 @@ header {
 /*  SKILLS  */
 
 .iconGallery {
-  height: 250px;
+  height: 220px;
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -525,12 +536,15 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(70, 70, 80, 0.85);
+  background-color: rgba(70, 70, 80, 0.6);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  a {
+    transition: color 0.5s;
+  }
 }
 
 .portImage:hover .siteLink {
@@ -543,6 +557,12 @@ header {
   p {
     padding: 0;
     margin: 15px 0;
+  }
+  a {
+    transition: color 0.5s;
+  }
+  a:not(:hover) {
+    color: $lightBlue;
   }
 }
 
@@ -576,6 +596,14 @@ header {
   text-align: right;
   color: limegreen;
   font-size: 0.9rem;
+}
+
+.partialFeature::after {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(25, 200, 0, 0.6);
+  font-size: 1.2rem;
+  position: relative;
+  right: -3px;
 }
 
 .noFeature::after {

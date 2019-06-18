@@ -11,6 +11,10 @@
     min-height: 910px;
   }
 
+  .learnMore {
+    margin:5% 0;
+  }
+
   .mainNav {
     height: 200px;
     padding: 5px;
@@ -32,23 +36,57 @@
     }
   }
 
-  .iconGallery img:hover {
-    width: 80px;
-    height: 80px;
-    margin: 0;
+  .iconGallery {
+    margin:0;
+    width:100%;
+    height:130px;
+    img:hover,
+    img {
+      width: 70px;
+      height: 70px;
+      margin: 0;
+    }
   }
 
-  .axoLogo:hover .axolotl, .axolotl {
+  .skillsText {
+    order: 2;
+  }
+
+  .axoLogo {
+    order: 1;
+  }
+
+  .axoLogo:hover .axolotl,
+  .axolotl {
     background-image: url("../assets/axologosmile.svg");
     transform: rotate(1deg);
     background-size: 170px;
     transition: background-size 0.6s cubic-bezier(0.5, 10, 0.5, 10), transform 0.6s cubic-bezier(0.5, -5, 0.5, 5);
   }
 
-  .axoLogo:hover .bubbles, .bubbles {
+  .axoLogo:hover .bubbles,
+  .bubbles {
     animation-name: bubble;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
+  }
+
+  .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .sectionContainer {
+    flex-direction: column;
+  }
+
+  .sectionText {
+    width: 100%;
+  }
+
+  .avContainer {
+    margin: 30px auto;
   }
 
   .headerBackgroundWrapper {
@@ -100,6 +138,11 @@
     position: relative;
     right: unset;
     bottom: 20px;
+    padding: 0 15px;
+    a:not(:last-child),
+    a:last-child {
+      margin: 0;
+    }
   }
 
   .socialButtons {
@@ -108,6 +151,14 @@
     justify-content: space-between;
     font-size: 3rem;
   }
+
+.portGallery {
+  padding:0 5px;
+}
+
+.portItem {
+  width:100%;
+}
 
   //   .mainNav {
   //     position: absolute;
