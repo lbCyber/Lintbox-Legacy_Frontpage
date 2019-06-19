@@ -3,46 +3,61 @@
     min-width: 30px;
   }
 
+  h4 {
+    font-size: 2rem;
+  }
+
   .wrapper {
     max-width: 768px;
   }
 
-  .learnMore {
-    margin:5% 0;
-  }
-
-  .mobileExclude {
-    position:absolute;
-    width:0;
-    height:0;
-    opacity:0;
+  .introSection {
+    padding-top: 195px;
   }
 
   .mainNav {
-    height: 200px;
-    padding: 5px;
+    height: unset;
+    padding: 0 10px;
     ul {
-      flex-direction: column;
-      width: 100%;
-      height: 150px;
       flex-wrap: wrap;
+      width: 100%;
+    }
+    .mainNavItem {
+      margin-bottom: 10px;
+      width: 50%;
+      height: 60px;
+    }
+    h4 {
+      width:100%;
+      text-align:center;
+    }
+    .navButton,
+    .mainNavItem a {
+      width: 95%;
+      height: 95%;
+      font-size: 1.3rem;
     }
   }
 
-  .mainNav li {
-    width: calc(50% - 10px);
-    a,
-    button {
-      font-size: 1rem;
-      padding: 30px;
-      width: 100%;
-    }
+  .learnMore {
+    margin: 5% 0;
+  }
+
+  .mobileExclude {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  .portLinks {
+    margin-bottom: 10px;
   }
 
   .iconGallery {
-    margin:0;
-    width:100%;
-    height:130px;
+    margin: 0;
+    width: 100%;
+    height: 170px;
     img:hover,
     img {
       width: 70px;
@@ -51,7 +66,7 @@
     }
   }
 
-  .skillsText {
+  .toolKit {
     order: 2;
   }
 
@@ -74,10 +89,15 @@
     animation-fill-mode: forwards;
   }
 
+  .portText {
+    padding: 30px 15px 0;
+  }
+
   .sectionTitle {
     font-size: 3rem;
     text-align: center;
     width: 100%;
+    height: 60px;
   }
 
   .sectionContainer {
@@ -87,7 +107,7 @@
   .sectionText {
     width: 100%;
     p {
-      font-size: .8rem;
+      font-size: 0.8rem;
       line-height: 24px;
     }
   }
@@ -96,13 +116,9 @@
     margin: 30px auto;
   }
 
-  .headerBackgroundWrapper {
-    filter: unset;
-  }
-
   .headerContainer {
     height: calc(100% - 280px);
-    min-height: 630px;
+    min-height: 645px;
   }
 
   .myPicContainer {
@@ -111,63 +127,118 @@
 
   .centerHeaderItems {
     flex-direction: column;
-    height: 300px;
+    height: 225px;
+    h2 {
+      font-size: 2.5rem;
+    }
+    h1 {
+      font-size: 3.2rem;
+    }
   }
 
   .headerText {
     justify-content: center;
     height: 100%;
-    margin:0;
+    margin: 0;
+    width:unset;
     h1,
     h2 {
       width: 100%;
       align-self: flex-start;
       padding-left: 25px;
+      line-height: 70px;
+    }
+  }
+
+  .navText {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    top: calc(100vh - 80px);
+    p {
+      order: 2;
+      width: 50%;
+      transition: opacity 0.5s, height 0.5s;
+    }
+    p:first-child {
+      text-align: left;
+    }
+    p:last-child {
+      text-align: right;
+    }
+  }
+
+  .scrollDown {
+    background-color:#000;
+    .mainNavItem {
+      margin-bottom: unset;
+      margin-top: 5px;
+    }
+  }
+
+  .scrollDownText {
+    top: calc(100vh - 40px);
+    p {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  .featureList .featureOrigAPI {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .featureItem {
+    width: calc(50% - 20px);
+  }
+
+  .skillsText {
+    padding-bottom: 260px;
+    margin-top: 290px;
+  }
+
+  .rightSkillsBox {
+    margin-top: 40px;
+    height: calc(100% - 370px);
+  }
+
+  .socialButtons {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    div:first-child {
+      margin-left: 0;
+    }
+    div:last-child {
+      margin-left: auto;
+      margin-right: 0;
     }
   }
 
   .headerTitles {
     flex-direction: column;
     justify-content: unset;
-    align-items: unset;
+    align-items: center;
     h3 {
       margin: 0 auto;
+      font-size: 1.5rem;
     }
   }
 
   .titleList {
-    margin: 0 auto;
-    width: 400px;
+    transform: scale(0.8);
   }
 
-  .navText {
+  .portGallery {
+    padding: 0 5px;
+  }
+
+  .portItem {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-    right: unset;
-    bottom: 20px;
-    padding: 0 15px;
-    a:not(:last-child),
-    a:last-child {
-      margin: 0;
-    }
   }
 
-  .socialButtons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 3rem;
+  footer {
+    margin-bottom: 40px;
   }
-
-.portGallery {
-  padding:0 5px;
-}
-
-.portItem {
-  width:100%;
-}
-
 }

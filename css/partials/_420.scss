@@ -1,7 +1,69 @@
 @media screen and (max-width: 420px) {
-
   body {
     min-width: 320px;
   }
 
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionContainer {
+    padding: 0;
+  }
+
+.iconGallery img, .iconGallery img:hover {
+    width: 80px;
+    height: 70px;
+    margin: 0;
+}
+
+.navText p {
+  font-size:.6rem;
+}
+
+  .titleList {
+    transform:scale(.65);
+  }
+
+  .sectionText {
+    border-radius: unset;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: none;
+  }
+
+  .rightSkillsBox {
+    width: 100%;
+  }
+
+  .figContainer {
+    border-radius: 0;
+  }
+
+  .portItem {
+    padding: 0;
+  }
+
+  .featureList {
+    .featureItem {
+      width: 100%;
+      margin-right: 0;
+    }
+    .featureOrigAPI {
+      width: 100%;
+    }
+  }
+  .portLink {
+    text-align:center;
+    i {
+      width:100%;
+      margin: 0 auto;
+    }
+    h6 {
+      font-size:.5rem;
+    }
+  }
+  footer {
+    letter-spacing: .1rem;
+  }
 }

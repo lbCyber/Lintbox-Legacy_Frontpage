@@ -11,6 +11,7 @@ $(function () {
   assets.scroller($('.aboutButton'), $('#about'))
   assets.scroller($('.skillsButton'), $('#skills'))
   assets.scroller($('.portfolioButton'), $('#portfolio'))
+  assets.scroller($('.upArrow'), $('#home'))
   $(document).scroll(() => {
     $('.mainNav').toggleClass('scrollDown', $(this).scrollTop() > $('.mainNav').height());
   });

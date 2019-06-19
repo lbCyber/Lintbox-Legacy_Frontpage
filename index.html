@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="home">
   <a href="#about" class="skipbox button">Skip to main content.</a>
   <a href="#contact" class="skipbox button">Skip to contact form.</a>
   <header>
@@ -31,10 +31,11 @@
     <p>lintbox.com - paul r.</p>
     <p>developer/designer/coder</p>
     <div class="socialButtons">
-      <a href="https://www.linkedin.com/in/procc/"><i class="fab fa-linkedin" aria-hidden></i></a>
-      <a href="mailto:paul@lintbox.com"><i class="fas fa-envelope-square" aria-hidden></i></a>
-      <a href="https://github.com/lbCyber"><i class="fab fa-github-square" aria-hidden></i></a>
-      <a href="https://twitter.com/lbcyber"><i class="fab fa-twitter-square" aria-hidden></i></a>
+      <div><a href="https://www.linkedin.com/in/procc/"><i class="fab fa-linkedin" aria-hidden></i></a></div>
+      <div><a href="mailto:paul@lintbox.com"><i class="fas fa-envelope-square" aria-hidden></i></a></div>
+      <div><a href="https://github.com/lbCyber"><i class="fab fa-github-square" aria-hidden></i></a></div>
+      <div><a href="https://twitter.com/lbcyber"><i class="fab fa-twitter-square" aria-hidden></i></a></div>
+      <div><i class="fas fa-angle-double-up upArrow"></i></div>
     </div>
   </div>
   <div class="introSection">
@@ -156,20 +157,22 @@
             <div class="bubbles bub7" aria-hidden></div>
             <div class="bubbles bub8" aria-hidden></div>
           </div>
-          <h5>my toolkit</h5>
-          <div class="iconGallery">
-            <img src="./assets/devicons/html5.svg" alt="Icon for HTML 5">
-            <img src="./assets/devicons/css.svg" alt="Icon for CSS 3">
-            <img src="./assets/devicons/javascript.svg" alt="Icon for Javascript">
-            <img src="./assets/devicons/jquery.svg" alt="Icon for jQuery">
-            <img src="./assets/devicons/mysql.svg" alt="Icon for my SQL">
-            <img src="./assets/devicons/node.svg" alt="Icon for Node.JS">
-            <img src="./assets/devicons/php.svg" alt="Icon for PHP">
-            <img src="./assets/devicons/python.svg" alt="Icon for Python">
-            <img src="./assets/devicons/react.svg" alt="Icon for React">
-            <img src="./assets/devicons/sass.svg" alt="Icon for SASS">
-            <img src="./assets/devicons/git.svg" alt="Icon for Git">
-            <img src="./assets/devicons/wordpress.svg" alt="Icon for WordPress">
+          <div class="toolKit">
+            <h5>my toolkit</h5>
+            <div class="iconGallery">
+              <img src="./assets/devicons/html5.svg" alt="Icon for HTML 5">
+              <img src="./assets/devicons/css.svg" alt="Icon for CSS 3">
+              <img src="./assets/devicons/javascript.svg" alt="Icon for Javascript">
+              <img src="./assets/devicons/jquery.svg" alt="Icon for jQuery">
+              <img src="./assets/devicons/mysql.svg" alt="Icon for my SQL">
+              <img src="./assets/devicons/node.svg" alt="Icon for Node.JS">
+              <img src="./assets/devicons/php.svg" alt="Icon for PHP">
+              <img src="./assets/devicons/python.svg" alt="Icon for Python">
+              <img src="./assets/devicons/react.svg" alt="Icon for React">
+              <img src="./assets/devicons/sass.svg" alt="Icon for SASS">
+              <img src="./assets/devicons/git.svg" alt="Icon for Git">
+              <img src="./assets/devicons/wordpress.svg" alt="Icon for WordPress">
+            </div>
           </div>
         </div>
       </div>
@@ -185,7 +188,12 @@
               <div class="portImage">
                 <img src="./assets/port-haiku.jpg" alt="Screenshot of my haiku generator project">
                 <div class="siteLink">
-                  <h5><a href="https://lintbox.com/haiku" target="_blank">&lt;view site/&gt;</a></h5>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/haiku" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="portText">
@@ -224,7 +232,17 @@
               <div class="portImage"><img src="./assets/port-scope.jpg"
                   alt="Screenshot of my interactive narrative app">
                 <div class="siteLink">
-                  <h5><a href="https://lintbox.com/sc" target="_blank">&lt;view site/&gt;</a></h5>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/sc" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/lbCyber/paul-rocca-project-3"><i class="fab fa-github-square"
+                        aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="portText">
@@ -267,7 +285,18 @@
               <div class="portImage"><img src="./assets/port-movie.jpg"
                   alt="Screenshot of a collaborative movie-picker app">
                 <div class="siteLink">
-                  <h5><a href="https://lintbox.com/movie-night" target="_blank">&lt;view site/&gt;</a></h5>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/movie-night" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/movie-night/movie-night-project-4"><i class="fab fa-github-square"
+                        aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="portText">
@@ -312,7 +341,18 @@
               <div class="portImage"><img src="./assets/port-cronus.jpg"
                   alt="Screenshot of my Cronus-Business PSD conversion">
                 <div class="siteLink">
-                  <h5><a href="https://lintbox.com/cronus-business" target="_blank">&lt;view site/&gt;</a></h5>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/cronus-business" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/cronus-business/psd.jpg" target="_blank"><i class="fas fa-file-image"
+                        aria-hidden></i>
+                      <h6>View PSD</h6>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="portText">
@@ -353,15 +393,33 @@
               <div class="portImage"><img src="./assets/port-foot.jpg"
                   alt="Screenshot of my foot-forward PSD conversion">
                 <div class="siteLink">
-                  <h5><a href="https://lintbox.com/foot-forward" target="_blank">&lt;view site/&gt;</a></h5>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/foot-forward" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href=""><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/foot-forward/psd.jpg" target="_blank"><i class="fas fa-file-image"
+                        aria-hidden></i>
+                      <h6>View PSD</h6>
+                    </a>
+                  </div>
                 </div>
               </div>
               <div class="portText">
                 <p>Foot-Forward is another PSD conversion site I found interesting and fulfilling to work on.</p>
                 <p>The reason is, specifically, because of the limitations imposed in the exercise: Objects
                   <em>must</em>
-                  be aligned using only floats. That meant taking a careful approach to ensure that collisions between objects
-                  wouldn't happen. With the additional factor of making the site fully responsive, this conversion was a lot of work to
+                  be aligned using only floats. That meant taking a careful approach to ensure that collisions between
+                  objects
+                  wouldn't happen. With the additional factor of making the site fully responsive, this conversion was a
+                  lot of work to
                   pull off, despite the very simple aesthetic.</p>
                 <p>Ultimately the work I've found most rewarding are those not necessarily the most aesthetically-rich,
                   but that provide the greatest learning experience.</p>
