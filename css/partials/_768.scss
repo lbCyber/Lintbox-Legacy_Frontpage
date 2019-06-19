@@ -7,12 +7,15 @@
     max-width: 768px;
   }
 
-  header {
-    min-height: 910px;
-  }
-
   .learnMore {
     margin:5% 0;
+  }
+
+  .mobileExclude {
+    position:absolute;
+    width:0;
+    height:0;
+    opacity:0;
   }
 
   .mainNav {
@@ -112,6 +115,8 @@
   }
 
   .headerText {
+    justify-content: center;
+    height: 100%;
     margin:0;
     h1,
     h2 {
