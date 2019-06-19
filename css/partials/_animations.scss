@@ -4,8 +4,8 @@
   position: relative;
   right: 0;
   background-image: url("../assets/axologosmile.svg");
-  background-size:0;
-  background-repeat:no-repeat;
+  background-size: 0;
+  background-repeat: no-repeat;
 }
 
 .axolotl {
@@ -20,13 +20,12 @@
   z-index: 100;
 }
 
-
-  .axoLogo:hover .axolotl {
-    background-image: url("../assets/axologosmile.svg");
-    transform:rotate(1deg);
-    background-size:251px;
-    transition: background-size .6s cubic-bezier(.5, 10, .5, 10), transform .6s cubic-bezier(.5, -5, .5, 5);
-  }
+.axoLogo:hover .axolotl {
+  background-image: url("../assets/axologosmile.svg");
+  transform: rotate(1deg);
+  background-size: 251px;
+  transition: background-size 0.6s cubic-bezier(0.5, 10, 0.5, 10), transform 0.6s cubic-bezier(0.5, -5, 0.5, 5);
+}
 
 .bubbles {
   opacity: 0;
@@ -36,11 +35,11 @@
   z-index: 0;
 }
 
-  .axoLogo:hover .bubbles {
-    animation-name:bubble;
-    animation-iteration-count: infinite;
-    animation-fill-mode:forwards;
-  }
+.axoLogo:hover .bubbles {
+  animation-name: bubble;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
 
 .bub1 {
   transform: translate(75px, -30px);
@@ -162,7 +161,7 @@
     bottom: 165px;
     left: 330px;
     background-size: 600px;
-    z-index:1;
+    z-index: 1;
   }
 }
 
@@ -173,7 +172,7 @@
   z-index: 1;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
-  opacity:0;
+  opacity: 0;
 }
 
 .line1,
@@ -927,56 +926,61 @@
 
 @keyframes navClickAnim {
   0% {
-  	transform:translate(0,0) rotate(0);
+    transform: translate(0, 0) rotate(0);
   }
   50% {
-  	transform:translate(-10px,0) rotate(-90deg);
+    transform: translate(-10px, 0) rotate(-90deg);
   }
   100% {
-  	transform:translate(10px,0) rotate(-90deg);
+    transform: translate(10px, 0) rotate(-90deg);
   }
 }
 
 @keyframes navClickAnimBar1 {
-	0%,20% {
-		transform:translateY(0);
-	}
-	45% {
-		transform:translateY(8px);
-		opacity:1;
-	}
-	46%,100% {
-		opacity:0;
-	}
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes navClickAnimBar2 {
-	0%,49% {
-		padding-top:0;
-		background-position-y:20px;
-		transform:translateY(0);
-	}
-	50% {
-		padding-top:25px;
-		background-position-y:20px;
-		transform:translateY(-10px);
-	}
-	100% {
-		padding-top:25px;
-		background-position-y:0;
-		transform:translateY(-10px);
-	}
+  0%,
+  49% {
+    padding-top: 0;
+    background-position-y: 20px;
+    transform: translateY(0);
+  }
+  50% {
+    padding-top: 25px;
+    background-position-y: 20px;
+    transform: translateY(-10px);
+  }
+  100% {
+    padding-top: 25px;
+    background-position-y: 0;
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes navClickAnimBar3 {
-	0%,20% {
-		transform:translateY(0);
-	}
-	45% {
-		transform:translateY(-8px);
-		opacity:1;
-	}
-	46%,100% {
-		opacity:0;
-	}
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  46%,
+  100% {
+    opacity: 0;
+  }
 }

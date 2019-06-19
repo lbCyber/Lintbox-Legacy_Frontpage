@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
   body {
-    min-width: 420px;
+    min-width: 30px;
   }
 
   .wrapper {
@@ -165,99 +165,4 @@
   width:100%;
 }
 
-  //   .mainNav {
-  //     position: absolute;
-  //     right: -400px;
-  //     top: 40px;
-  //     border-bottom-left-radius: 10px;
-  //     transition: right 0.5s;
-  //     overflow: hidden;
-  //   }
-
-  //   .mobileNavButton {
-  //     /* 	SLIDES NAV INTO BODY, EXCLUSIVE TO TABLET AND MOBILE		*/
-  //     width: 20px;
-  //     height: 20px;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: space-around;
-  //     position: absolute;
-  //     top: 10px;
-  //     right: 25px;
-  //     cursor: pointer;
-  //     outline: none;
-  //   }
-
-  //   .mobileBar {
-  //     width: 25px;
-  //     border-bottom: 4px solid #666;
-  //     border-radius: 2px;
-  //   }
-
-  //   /*		ANIMATION FOR NAV BAR		*/
-
-  //   .mainNav ul {
-  //     flex-direction: column;
-  //     align-items: flex-end;
-  //     margin: 0;
-  //     li {
-  //       border-top: 1px solid #ccc;
-  //     }
-  //     a {
-  //       background-image: url("./../assets/arrow.svg");
-  //       background-size: 0.5em;
-  //       background-repeat: no-repeat;
-  //       background-position: 15px 50%;
-  //       -webkit-appearance: none;
-  //       -moz-appearance: none;
-  //       font-weight: 400;
-  //       font-size: 1.7em;
-  //       width: 250px;
-  //       height: 65px;
-  //       display: block;
-  //       padding: 0.6em 0 0 2em;
-  //       &:active {
-  //         background-color: rgba(0, 0, 0, 0.2);
-  //         color: #fff;
-  //       }
-  //     }
-  //   }
-
-  //   /* 	CLASSES TOGGLED VIA JAVASCRIPT		*/
-
-  //   .bar1Click {
-  //     animation: navclickanimbar1 ease-in-out 1s;
-  //     animation-fill-mode: both;
-  //   }
-
-  //   .bar2Click {
-  //     animation: navclickanimbar2 ease-in-out 1s;
-  //     animation-fill-mode: both;
-  //     background-image: url("../assets/navarrow.svg");
-  //     background-size: 120%;
-  //     background-repeat: no-repeat;
-  //     background-position-x: 50%;
-  //   }
-
-  //   .bar3Click {
-  //     animation: navclickanimbar3 ease-in-out 1s;
-  //     animation-fill-mode: both;
-  //   }
-
-  //   .headerNavClick {
-  //     right: 0;
-  //   }
-
-  //   .mobileNavButtonClick,
-  //   .bar1Click,
-  //   .bar2Click .bar3Click {
-  //     animation-iteration-count: 1;
-  //     transform-origin: 50% 50%;
-  //     transition: all 1s;
-  //   }
-
-  //   .mobileNavButtonClick {
-  //     animation: navclickanim ease-in-out 1s;
-  //     animation-fill-mode: both;
-  //   }
 }

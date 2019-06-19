@@ -17,21 +17,28 @@
   <a href="#about" class="skipbox button">Skip to main content.</a>
   <a href="#contact" class="skipbox button">Skip to contact form.</a>
   <header>
-    <div class="headerBackgroundWrapper"></div>
     <nav class="mainNav">
       <h4>Lintbox.</h4>
-      <!-- <div id="mobileNavButton" class="mobileNavButton mobileElement">
-        <div id="bar1" class="mobileBar"></div>
-        <div id="bar2" class="mobileBar"></div>
-        <div id="bar3" class="mobileBar"></div>
-      </div> -->
       <ul>
-        <li class="mainNavItem"><button class="aboutButton mobileElement">&lt;about me/&gt;</button></li>
-        <li class="mainNavItem"><button class="skillsButton mobileElement">&lt;my skills/&gt;</button></li>
-        <li class="mainNavItem"><button class="portfolioButton mobileElement">&lt;my work/&gt;</button></li>
+        <li class="mainNavItem"><button class="aboutButton navButton">&lt;about me/&gt;</button></li>
+        <li class="mainNavItem"><button class="skillsButton navButton">&lt;my skills/&gt;</button></li>
+        <li class="mainNavItem"><button class="portfolioButton navButton">&lt;my work/&gt;</button></li>
         <li class="mainNavItem"><a href="mailto:paul@lintbox.com">&lt;contact/&gt;</a></li>
       </ul>
     </nav>
+  </header>
+  <div class="navText">
+    <p>lintbox.com - paul r.</p>
+    <p>developer/designer/coder</p>
+    <div class="socialButtons">
+      <a href="https://www.linkedin.com/in/procc/"><i class="fab fa-linkedin" aria-hidden></i></a>
+      <a href="mailto:paul@lintbox.com"><i class="fas fa-envelope-square" aria-hidden></i></a>
+      <a href="https://github.com/lbCyber"><i class="fab fa-github-square" aria-hidden></i></a>
+      <a href="https://twitter.com/lbcyber"><i class="fab fa-twitter-square" aria-hidden></i></a>
+    </div>
+  </div>
+  <div class="introSection">
+    <div class="headerBackgroundWrapper"></div>
     <div class="headerContainer">
       <div class="centerHeaderItems">
         <div class="backgroundStyle"></div>
@@ -77,51 +84,38 @@
       </div>
       <button class="learnMore aboutButton" aria-label="click here to learn more">&lt;learn more/&gt;</button>
     </div>
-    <div class="navText">
-      <p>lintbox.com - paul r.</p>
-      <p>developer/designer/coder</p>
-      <div class="socialButtons">
-        <a href="https://www.linkedin.com/in/procc/"><i class="fab fa-linkedin" aria-hidden></i></a>
-        <a href="mailto:paul@lintbox.com"><i class="fas fa-envelope-square" aria-hidden></i></a>
-        <a href="https://github.com/lbCyber"><i class="fab fa-github-square" aria-hidden></i></a>
-        <a href="https://twitter.com/lbcyber"><i class="fab fa-twitter-square" aria-hidden></i></a>
-      </div>
-    </div>
-  </header>
+  </div>
   <main>
     <section class="about" id="about">
-      <h4 class="sectionTitle" aria-hidden>&lt;about/&gt;</h4>
+      <h4 class="sectionTitle" aria-hidden>&lt;about me/&gt;</h4>
       <div class="wrapper sectionContainer">
         <div class="avContainer paulAv">
           <img src="./assets/meAv.png" alt="Pixel-art illustration of myself">
         </div>
         <div class="sectionText">
-          <div class="aboutText">
-            <h4>about me</h4>
-            <h5>hey there!</h5>
-            <p>I'm a multi-skilled front-end developer and writer based in Toronto, Canada.</p>
-            <p>I'm always refining my skills as a creator and as both a front-end and back-end developer. Below you can
-              see just a small glimpse of the work I've done as a front-end designer, applying my past skills in print
-              design, graphic design, animation, and photography!</p>
-            <h5>What's your story?</h5>
-            <p>Born in 1984 in Niagara Falls, I eventually found myself in Toronto, studying at prestigious schools
-              including University of Toronto, Humber College, and HackerYou.</p>
-            <p>I have years of experience freelancing as a web developer for small businesses and non-profits, as well
-              as
-              a copy editor and writer, trading largely with local publications.</p>
-            <h5>Okay, but what else?</h5>
-            <p>Having graduated from HackerYou's immersive front-end development program, I have become a highly-skilled
-              and dedicated front-end developer, with a deeply-rooted love for what I do.</p>
-            <p>I have an indomitable passion for giving back to the LGBTQ community, of which I owe so much, and love
-              working with people and working toward making the world a better place through both charity foundations
-              and
-              advocacy.</p>
-            <p>Most of all, I am dedicated to growing as a person and becoming better every day, however I can. I have a
-              genuine love of all people and will always go out of my way to provide whatever support I can for those in
-              need.</p>
-            <p>So if you have anything you'd like to talk about, please <a href="mailto:paul@lintbox.com">contact
-                me!</a>
-          </div>
+          <h5>Hey there!</h5>
+          <p>I'm a multi-skilled front-end developer and writer based in Toronto, Canada.</p>
+          <p>I'm always refining my skills as a creator and as both a front-end and back-end developer. Below you can
+            see just a small glimpse of the work I've done as a front-end developer, applying my past skills in print
+            design, graphic design, animation, and photography!</p>
+          <h5 class="mobileExclude">What's your story?</h5>
+          <p class="mobileExclude">Born and raised in Niagara Falls, a I grew I found myself in love with the city of
+            Toronto, studying at prestigious schools
+            including University of Toronto, Humber College, and HackerYou.</p>
+          <p>I have years of experience freelancing as a web developer for small businesses and non-profits, as well
+            as a copy editor and writer, trading largely with local publications.</p>
+          <h5 class="mobileExclude">Okay, but what else?</h5>
+          <p>Having graduated from HackerYou's immersive front-end development program, I have become a highly-skilled
+            and dedicated front-end developer, with a deeply-rooted love for what I do.</p>
+          <p>I have an indomitable passion for giving back to the LGBTQ community, of which I owe so much, and love
+            working with people and working toward making the world a better place through both charity foundations
+            and advocacy.</p>
+          <p>Most of all, I am dedicated to growing as a person and becoming better every day, however I can. I have a
+            genuine love of all people and will always go out of my way to provide whatever support I can for those in
+            need.</p>
+          <p class="mobileExclude">So if you have anything you'd like to talk about, please <a
+              href="mailto:paul@lintbox.com">contact
+              me!</a>
         </div>
       </div>
       </div>
@@ -131,24 +125,38 @@
       <h4 class="sectionTitle" aria-hidden>&lt;skills/&gt;</h4>
       <div class="wrapper sectionContainer">
         <div class="skillsText sectionText">
-          <h4>my skills</h4>
-          <h5>born a creator</h5>
-          <p>I consider myself a life-long creator and a veteran in web development (though one who is constantly
+          <h5 class="mobileExclude">Born a creator</h5>
+          <p class="mobileExclude">I consider myself a life-long creator and a veteran in web development (though one
+            who is constantly
             learning and improving). </p>
-          <p>My philsophy in design has always been to challenge myself and invent new and ambitious ways of developing
+          <p>My philosophy in design has always been to challenge myself and invent new and ambitious ways of developing
             content. In web development in particular, I pride myself in avoiding prefabs and third-party libraries
             whenever possible; if it's something I can learn to do myself, that's what I'm going to do.</p>
-          <h5>born a programmer</h5>
+          <h5 class="mobileExclude">Born a programmer</h5>
           <p>My experience as a programmer began at an early age, when I would explore the inner workings of DOS and
             write small games using chains of batch scripts.</p>
           <p>Since then, I have expanded on and improved my skills and abilities on my own as a self-taught coder with
             experience in languages including HTML, CSS, Javascript, PHP, Python, and C.</p>
-          <h5>born an artist</h5>
+          <h5 class="mobileExclude">Born an artist</h5>
           <p>On the design side of web development, as the son of an art teacher, I had always possessed a certain
             ability for visual arts and layout. Throughout my life I have constantly worked to improve my aptitude in
             digital graphics and animation, as well as my instincts in colours and form. With a formal education in
             print design and layout, I've used my collection of abilities to always come up with new and interesting
             ways of developing exciting web sites and applications.</p>
+        </div>
+        <div class="rightSkillsBox">
+          <div class="avContainer axoLogo">
+            <div class="axolotl" aria-label="Illustration of a cute, smiling axolotl"></div>
+            <div class="bubbles bub1" aria-hidden></div>
+            <div class="bubbles bub2" aria-hidden></div>
+            <div class="bubbles bub3" aria-hidden></div>
+            <div class="bubbles bub4" aria-hidden></div>
+            <div class="bubbles bub5" aria-hidden></div>
+            <div class="bubbles bub6" aria-hidden></div>
+            <div class="bubbles bub7" aria-hidden></div>
+            <div class="bubbles bub8" aria-hidden></div>
+          </div>
+          <h5>my toolkit</h5>
           <div class="iconGallery">
             <img src="./assets/devicons/html5.svg" alt="Icon for HTML 5">
             <img src="./assets/devicons/css.svg" alt="Icon for CSS 3">
@@ -164,17 +172,6 @@
             <img src="./assets/devicons/wordpress.svg" alt="Icon for WordPress">
           </div>
         </div>
-        <div class="avContainer axoLogo">
-          <div class="axolotl" aria-label="Illustration of a cute, smiling axolotl"></div>
-          <div class="bubbles bub1" aria-hidden></div>
-          <div class="bubbles bub2" aria-hidden></div>
-          <div class="bubbles bub3" aria-hidden></div>
-          <div class="bubbles bub4" aria-hidden></div>
-          <div class="bubbles bub5" aria-hidden></div>
-          <div class="bubbles bub6" aria-hidden></div>
-          <div class="bubbles bub7" aria-hidden></div>
-          <div class="bubbles bub8" aria-hidden></div>
-        </div>
       </div>
       <button class="learnMore portfolioButton">&lt;my work/&gt;</button>
     </section>
@@ -183,6 +180,7 @@
       <div class="wrapper">
         <div class="portGallery">
           <figure class="portItem portfolioItem1">
+            <h4>Haiku Generator</h4>
             <div class="figContainer">
               <div class="portImage">
                 <img src="./assets/port-haiku.jpg" alt="Screenshot of my haiku generator project">
@@ -191,7 +189,6 @@
                 </div>
               </div>
               <div class="portText">
-                <h5>Haiku Generator</h5>
                 <p>The Haiku generator was my first larger-scale web application, and one of my prouder accomplishments.
                 </p>
                 <p>Programmed entirely in Javascript, this project was a labour of love and my final piece for
@@ -203,7 +200,14 @@
                 <p>The project took about a week to design and build, with additional time spent to refine and add to
                   the
                   overall product after completion.</p>
-                <!-- <h5><a href="https://lintbox.com/haiku" target="_blank">&lt;view site/&gt;</a></h5> -->
+                <div class="portLinks">
+                  <div class="portLink">
+                    <a href="https://lintbox.com/haiku" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="featureList">
@@ -215,6 +219,7 @@
             </div>
           </figure>
           <figure class="portItem portfolioItem2">
+            <h4>Scope Creep</h4>
             <div class="figContainer">
               <div class="portImage"><img src="./assets/port-scope.jpg"
                   alt="Screenshot of my interactive narrative app">
@@ -223,7 +228,6 @@
                 </div>
               </div>
               <div class="portText">
-                <h5>Scope Creep</h5>
                 <p>Scope Creep has been my most ambitious project to date, and a piece I'm constantly working on and
                   improving. It currently exists a proof-of-concept story-telling framework running a work-in-progress
                   story.</p>
@@ -234,7 +238,19 @@
                   CSS, including scanlines, image artifacting, and pixelation. The 'Options' button provides the user
                   with their choice of traditional computer terminals for the styles to emulate, including a plaintext
                   option as an accessibility feature.</p>
-                <!-- <h5><a href="https://lintbox.com/sc" target="_blank">&lt;view site/&gt;</a></h5> -->
+                <div class="portLinks">
+                  <div class="portLink">
+                    <a href="https://lintbox.com/sc" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/lbCyber/paul-rocca-project-3"><i class="fab fa-github-square"
+                        aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="featureList">
@@ -246,6 +262,7 @@
             </div>
           </figure>
           <figure class="portItem portfolioItem3">
+            <h4>Movie Night</h4>
             <div class="figContainer">
               <div class="portImage"><img src="./assets/port-movie.jpg"
                   alt="Screenshot of a collaborative movie-picker app">
@@ -254,7 +271,6 @@
                 </div>
               </div>
               <div class="portText">
-                <h5>Movie Night</h5>
                 <p>Movie Night was a collaborative project with the purpose of using a chosen third-party API to render
                   a
                   small and fun application.</p>
@@ -265,7 +281,20 @@
                 <p>We used <a href="http://themoviedb.org" target="_blank">theMovieDB.org</a>'s API for this purpose,
                   and
                   developed a clean, Kodi-inspired design as its output.</p>
-                <!-- <h5><a href="https://lintbox.com/movie-night" target="_blank">&lt;view site/&gt;</a></h5> -->
+                <div class="portLinks">
+                  <div class="portLink">
+                    <a href="https://lintbox.com/movie-night" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/movie-night/movie-night-project-4"><i class="fab fa-github-square"
+                        aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="featureList">
@@ -278,6 +307,7 @@
             </div>
           </figure>
           <figure class="portItem portfolioItem4">
+            <h4>Cronus (PSD)</h4>
             <div class="figContainer">
               <div class="portImage"><img src="./assets/port-cronus.jpg"
                   alt="Screenshot of my Cronus-Business PSD conversion">
@@ -286,17 +316,29 @@
                 </div>
               </div>
               <div class="portText">
-                <h5>Cronus (PSD)</h5>
                 <p>Cronus is a large, single-page spread mockup, and only the second PSD conversion I had ever
                   attempted.
                 </p>
-                <p>My personal challenge in this PSD conversion was to add an additional challenge of adding features and elements not necessarily breaking faithfulness to the original.</p>
+                <p>My personal challenge in this PSD conversion was to add an additional challenge of adding features
+                  and elements not necessarily breaking faithfulness to the original.</p>
                 <p>Though very minimal repsonsiveness was implemented (as was instructed), I'm proud of the things I
                   learned through this exercise and the new and interesting design tricks I had implemented.</p>
                 <p>Overall, developing this site, though not of my own original design, was a fun experience and allowed
                   me to test my creativity in ways I hadn't often explored.</p>
-                <!-- <h5><a href="https://lintbox.com/cronus-business/psd.jpg" target="_blank">&lt;view PSD/&gt;</a></h5>
-              <h5><a href="https://lintbox.com/cronus-business" target="_blank">&lt;view site/&gt;</a></h5> -->
+                <div class="portLinks">
+                  <div class="portLink">
+                    <a href="https://lintbox.com/cronus-business" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/cronus-business/psd.jpg" target="_blank"><i class="fas fa-file-image"
+                        aria-hidden></i>
+                      <h6>View PSD</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="featureList">
@@ -306,6 +348,7 @@
             </div>
           </figure>
           <figure class="portItem portfolioItem5">
+            <h4>Foot-Forward (PSD)</h4>
             <div class="figContainer">
               <div class="portImage"><img src="./assets/port-foot.jpg"
                   alt="Screenshot of my foot-forward PSD conversion">
@@ -314,21 +357,33 @@
                 </div>
               </div>
               <div class="portText">
-                <h5>Foot-Forward (PSD)</h5>
                 <p>Foot-Forward is another PSD conversion site I found interesting and fulfilling to work on.</p>
                 <p>The reason is, specifically, because of the limitations imposed in the exercise: Objects
                   <em>must</em>
-                  be aligned using only floats, not flex-boxes or grids. Such a restriction allowed me to think outside
-                  of
-                  my comfort zone and to make careful approaches to my design to ensure that collisions between objects
-                  or
-                  parental collapses wouldn't happen.</p>
-                <p>With the additional factor of making the site fully responsive, this conversion was a lot of work to
-                  pull off, despite the very simple aesthetic and it not being my own original design.</p>
+                  be aligned using only floats. That meant taking a careful approach to ensure that collisions between objects
+                  wouldn't happen. With the additional factor of making the site fully responsive, this conversion was a lot of work to
+                  pull off, despite the very simple aesthetic.</p>
                 <p>Ultimately the work I've found most rewarding are those not necessarily the most aesthetically-rich,
                   but that provide the greatest learning experience.</p>
-                <!-- <h5><a href="https://lintbox.com/foot-forward/psd.jpg" target="_blank">&lt;view PSD/&gt;</a></h5>
-              <h5><a href="https://lintbox.com/foot-forward" target="_blank">&lt;view site/&gt;</a></h5> -->
+                <div class="portLinks">
+                  <div class="portLink">
+                    <a href="https://lintbox.com/foot-forward" target="_blank"><i class="fas fa-broadcast-tower"
+                        aria-hidden></i>
+                      <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href=""><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://lintbox.com/foot-forward/psd.jpg" target="_blank"><i class="fas fa-file-image"
+                        aria-hidden></i>
+                      <h6>View PSD</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="featureList">

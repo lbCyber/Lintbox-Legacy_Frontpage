@@ -40,10 +40,10 @@ html {
 }
 
 body {
-  background-color: $darkGrey;
   font-size: 1rem;
   color: #fff;
   position: relative;
+  background-color: #0f0f15;
 }
 
 a {
@@ -87,7 +87,11 @@ h5 {
   font-family: $special;
   color: $lightBlue;
   font-size: 1.5rem;
-  margin: 40px 0 15px;
+  margin-bottom: 15px;
+}
+
+h5:not(:first-child) {
+  margin-top: 40px;
 }
 
 h6 {
@@ -107,13 +111,46 @@ h6 {
 }
 
 button,
-.mainNavItem,
-.navText,
+.mainNavItem a,
 .learnMore {
   color: $lightBlue;
   text-transform: lowercase;
   font-size: 1.4rem;
+  background: none;
+  border: 0;
+  box-shadow: inset 0 0 0 2px $lightBlue;
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: color 0.3s;
+  margin: 0 5px;
+  &::before {
+    border: 2px solid transparent;
+    top: 0;
+    left: 0;
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  &:hover {
+    color: $amber;
+  }
+  &:hover::before {
+    border-top-color: $amber; // Show borders
+    border-right-color: $amber;
+    border-bottom-color: $amber;
+    border-left-color: $amber;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s,
+      border-bottom-color 0.15s linear 0.2s, border-left-color 0.15s linear 0.3s;
+  }
 }
+
 .avContainer {
   width: 300px;
   height: 300px;
@@ -133,9 +170,6 @@ button,
 }
 
 .sectionText {
-  height: 70vh;
-  max-height: 1000px;
-  min-height: 485px;
   width: 70%;
 }
 
@@ -152,16 +186,14 @@ section {
 
 .sectionTitle {
   color: $lightBlue;
-  position: absolute;
-  font-size: 10rem;
-  opacity: 0.1;
+  font-size: 6rem;
+  opacity: 0.5;
   z-index: 0;
-  top: 5%;
   text-shadow: 0 0 10px #000;
-  right: 5%;
   user-select: none;
   cursor: default;
   z-index: 0;
+  height: 150px;
 }
 
 /*	SKIP BOX  */
@@ -183,16 +215,23 @@ section {
 /*  HEADER  */
 
 header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.introSection {
   height: 100vh;
+  padding-top: 115px;
   position: relative;
-  background: linear-gradient(#3b3b3f, #3b3b3f), url("./../assets/mePic.jpg");
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-size: auto, auto;
-  background-blend-mode: multiply;
   z-index: 0;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%),
+    linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%),
+    linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
   overflow: hidden;
   min-height: 768px;
 }
@@ -200,69 +239,80 @@ header {
 .headerBackgroundWrapper {
   height: 100%;
   width: 100%;
-  filter: blur(8px);
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/mePic.jpg");
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-position: center;
   position: absolute;
   z-index: -1;
 }
 
 .mainNav {
-  height: 100px;
-  // background-color: rgba(0, 0, 0, 0.6);
+  height: 115px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 0 40px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+  transition: background-color 0.5s, height 0.5s;
+  .navButton,
+  .mainNavItem a {
+    font-size: 1rem;
+    width: 160px;
+    height: 40px;
+  }
   ul {
     height: 100%;
     list-style: none;
     display: flex;
-    width: 60%;
+    width: 70%;
     justify-content: space-between;
     align-items: center;
-  }
-  li a,
-  li button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    width: 160px;
-    height: 40px;
-    background-color: transparent;
-    border-radius: 20px;
-    text-align: center;
-    border: none;
-  }
-  li:hover a,
-  li:hover button {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: $amber;
-    border: 1px solid $amber;
   }
   h4 {
     color: $lightBlue;
     font-size: 2rem;
     margin: 0 10px;
+    user-select: none;
+    cursor: default;
+    transition: color 0.5s;
+    width: 30%;
+    margin-left: 5%;
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
+.scrollDown {
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .navText {
-  font-size: 0.8rem;
-  width: 40%;
+  color: $lightBlue;
+  height: 150px;
   text-align: right;
-  position: absolute;
-  bottom: 10px;
-  right: 40px;
+  position: fixed;
+  top: calc(100vh - 150px);
+  right: 0;
+  z-index: 9999;
+  font-size: 1rem;
+  padding: 20px 30px 20px 0;
+  width: 300px;
+  border-radius: 15px 0 0 0;
+  transition: background-color 0.5s, padding 0.5s, font-size 0.5s, width 0.5s, height 0.5s, top 0.5s;
+}
+
+.scrollDownText {
+  height: 110px;
+  width: 220px;
+  padding: 10px 20px 10px 0;
+  font-size: 0.8rem;
+  background-color: rgba(17, 17, 17, 0.9);
+  top: calc(100vh - 110px);
 }
 
 .socialButtons {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  transition: font-size 0.5s;
   a {
     transition: color 0.5s;
   }
@@ -272,6 +322,10 @@ header {
   a:last-child {
     margin-left: 10px;
   }
+}
+
+.scrollDownText .socialButtons {
+  font-size: 1.4rem;
 }
 
 .headerContainer {
@@ -288,6 +342,7 @@ header {
 .centerHeaderItems {
   display: flex;
   width: 1000px;
+  height: 300px;
   position: relative;
   justify-content: flex-end;
   align-items: center;
@@ -328,6 +383,7 @@ header {
   align-items: flex-end;
   flex-wrap: wrap;
   width: 500px;
+  line-height: 100px;
   h1,
   h2 {
     width: 500px;
@@ -396,21 +452,17 @@ header {
 .learnMore {
   width: 250px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
-  border-radius: 50px;
-  border: 4px solid #48a0f0;
+  border-radius: 20px;
   text-shadow: 0px 3px 8px black;
   margin-top: 5%;
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #e99b36;
-    border-color: #e99b36;
-  }
 }
 
 /*  ABOUT */
+
+main {
+  overflow: hidden;
+}
 
 .paulAv {
   background-image: url("./../assets/meAvSkeleton.png");
@@ -427,11 +479,12 @@ header {
 }
 
 .about {
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/matchBack.jpg");
-  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: linear-gradient(-215deg, darken($darkGrey, 17%) 0% 27.9%, transparent 28% 100%),
+    linear-gradient(-245deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%),
+    linear-gradient(-185deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%);
 }
 
 .aboutText a {
@@ -443,34 +496,42 @@ header {
 
 /*  SKILLS  */
 
+.rightSkillsBox {
+  width: 30%;
+  h5 {
+    text-align: center;
+  }
+}
+
 .iconGallery {
-  height: 220px;
   display: flex;
-  width: 780px;
+  width: 380px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   flex-wrap: wrap;
   img {
     width: 90px;
-    height: 90px;
-    padding: 10px 15px;
+    height: 60px;
+    padding: 0 15px;
     transition: width 0.5s, height 0.5s, margin 0.5s;
     margin: 10px 0;
     &:hover {
       width: 110px;
-      height: 110px;
+      height: 80px;
       margin: 0;
+      filter: hue-rotate(140deg) brightness(0.8) saturate(2.5);
     }
   }
 }
 
 .skills {
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/codeBack.jpg");
-  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: linear-gradient(-125deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%),
+    linear-gradient(-145deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%),
+    linear-gradient(-55deg, darken($darkGrey, 17%) 0% 57.9%, transparent 58% 100%);
 }
 
 /*  PORTFOLIO */
@@ -481,9 +542,9 @@ header {
   border-radius: 20px;
   padding: 30px;
   p {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -494,18 +555,18 @@ header {
 }
 
 .figContainer {
-  background-color: rgba(150, 150, 175, 0.4);
+  background-color: rgba(150, 150, 175, 0.2);
   display: flex;
   flex-wrap: wrap;
-  width:100%;
+  width: 100%;
   overflow: hidden;
   border-radius: 25px;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   p {
     padding: 0;
     font-size: 0.9rem;
     line-height: 26px;
-    margin: 15px 0;
+    margin: 0 0 15px;
   }
   h5 a {
     display: flex;
@@ -525,7 +586,13 @@ header {
 .portItem {
   margin: 50px 0;
   width: 100%;
+  h4 {
+    color: $lightBlue;
+  }
   &:nth-child(even) {
+    h4 {
+      text-align: right;
+    }
     .portImage {
       order: 2;
     }
@@ -536,16 +603,16 @@ header {
 }
 
 .portfolio {
-  background-image: linear-gradient($darkGrey, $darkGrey), url("./../assets/workBack.jpg");
-  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: linear-gradient(-25deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%),
+    linear-gradient(-65deg, darken($darkSlate, 23%) 0% 29.85%, transparent 30% 100%),
+    linear-gradient(-80deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
   padding-bottom: 60px;
 }
 
 .portImage {
-  height: 400px;
   width: 400px;
   overflow: hidden;
   position: relative;
@@ -581,6 +648,8 @@ header {
 .portText {
   width: calc(100% - 400px);
   padding: 30px 35px 0;
+  display: flex;
+  flex-wrap:wrap;
   h5 {
     width: calc(100% - 450px);
     height: 40px;
@@ -594,6 +663,25 @@ header {
     color: $lightBlue;
   }
 }
+.portLinks {
+  display: flex;
+  justify-content: flex-start;
+  align-self:flex-end;
+  width:100%;
+  i {
+    font-size: 1.9rem;
+  }
+  a h6 {
+    transition: color 0.5s;
+  }
+  a:hover h6 {
+    color: $amber;
+  }
+}
+
+.portLink {
+  width:30%;
+}
 
 .featureList {
   display: flex;
@@ -603,7 +691,7 @@ header {
   position: relative;
   h6 {
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     font-size: 0.6rem;
     line-height: 26px;
     width: 200px;
@@ -613,16 +701,10 @@ header {
     letter-spacing: 0.5px;
     position: relative;
     overflow: hidden;
+    cursor: default;
+    user-select: none;
     z-index: 1;
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      background-image: linear-gradient(45deg, $faintGrey 0 90.5%, transparent 91%);
-      z-index: -2;
-    }
+    background-image: linear-gradient(45deg, #666 0 90.5%, transparent 91%);
     &::after {
       background-image: linear-gradient(45deg, $lightBlue 0 90.5%, transparent 91%);
       content: "";
@@ -653,7 +735,7 @@ footer {
   text-transform: uppercase;
   width: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   height: 30px;
   opacity: 0.6;
   padding: 0;
