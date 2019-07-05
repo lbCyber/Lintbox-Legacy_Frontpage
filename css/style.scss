@@ -237,13 +237,6 @@ header {
   min-height: 768px;
 }
 
-.headerBackgroundWrapper {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
 .mainNav {
   height: 115px;
   display: flex;
@@ -303,12 +296,16 @@ header {
 }
 
 .scrollDownText {
-  height: 110px;
-  width: 285px;
-  padding: 10px 20px 10px 0;
   font-size: 0.8rem;
   background-color: rgba(17, 17, 17, 0.9);
-  top: calc(100vh - 110px);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 15px;
+  top: calc(100vh - 50px);
+  align-items: center;
+  height: 50px;
+  border-radius: 0;
 }
 
 .socialButtons {
@@ -510,6 +507,10 @@ main {
   }
 }
 
+.toolKit h5 {
+  margin-top: 15px;
+}
+
 .iconGallery {
   display: flex;
   width: 380px;
@@ -652,14 +653,18 @@ main {
       color: $amber;
     }
   }
+  .portLink {
+    max-width: 200px;
+  }
 }
 
 .portLink {
   margin: 0 10px;
   font-size: 2rem;
   width: calc(100% / 3);
+  text-align: center;
 }
-  
+
 .portImage:hover .siteLink {
   opacity: 1;
 }
@@ -757,6 +762,7 @@ footer {
   opacity: 0.6;
   padding: 0;
   position: absolute;
+  margin-bottom: 50px;
   transition: padding 0.5s, height 0.5s, opacity 0.5s;
   cursor: default;
   p {
