@@ -1,6 +1,6 @@
 @media screen and (max-width: 420px) {
-  body {
-    min-width: 320px;
+  html {
+    min-width: 420px;
   }
 
   .sectionTitle {
@@ -56,9 +56,6 @@
     .featureItem {
       width: 100%;
       margin-right: 0;
-    }
-    .featureOrigAPI {
-      width: 100%;
     }
   }
   .portLink {

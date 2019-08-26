@@ -6,12 +6,15 @@
   .mainNav {
     flex-direction: column;
     transition: background-color 0.5s 0.5s, height 0.5s 0.5s;
+    padding: 0 20px;
     ul {
-      width: 95%;
+      width:100%;
     }
     h4 {
       margin-top: 15px;
       margin-left: 0;
+      margin-right:0;
+      text-align:center;
       transition: height 0.5s, opacity 0.5s, margin-top 0.5s;
     }
   }
