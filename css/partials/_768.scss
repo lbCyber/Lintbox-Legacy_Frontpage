@@ -29,7 +29,7 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     border-bottom-left-radius: 10px;
     transition: right .5s;
     height: 100vh;
-    padding-bottom: 30vh;
+    padding-bottom: 20vh;
     top: 0;
     background-color: rgba(50, 50, 50, .95);
     right: -100%;
@@ -38,6 +38,7 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
       align-items: center;
       margin: 80px git st0 0 0;
       border-bottom-left-radius: 20px;
+      padding-top: 70px;
       .mainNavItem {
         width: 90%;
         margin: 20px 0;
@@ -84,6 +85,12 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     align-items: center;
     padding: 8px 0;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    transition: background-color .3s;
+  }
+  .mobileNavButtonClick {
+    background-color: transparent;
   }
   .mobileBar {
     width: 35px;
