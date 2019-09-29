@@ -7,6 +7,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+<<<<<<< HEAD
     -webkit-transition: background-color .5s, height .5s;
     -o-transition: background-color .5s, height .5s;
     transition: background-color .5s, height .5s;
@@ -25,6 +26,22 @@
     -o-transition: height .5s, opacity .5s, margin-top .5s;
     transition: height .5s, opacity .5s, margin-top .5s
   }
+=======
+    transition: background-color 0.5s 0.5s, height 0.5s 0.5s;
+    padding: 0 20px;
+    ul {
+      width:100%;
+    }
+    h4 {
+      margin-top: 15px;
+      margin-left: 0;
+      margin-right:0;
+      text-align:center;
+      transition: height 0.5s, opacity 0.5s, margin-top 0.5s;
+    }
+  }
+
+>>>>>>> 1c04e16ccc1e79bb81c87569338d65cc46fd2b8e
   .scrollDown {
     height: 70px
   }

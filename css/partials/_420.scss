@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   @media screen and (max-width:420px) {
     // .mainNav .mainNavItem {
     //   width: 50%
@@ -44,18 +45,85 @@
       padding: 0
     }
     .featureList .featureItem {
+=======
+@media screen and (max-width: 420px) {
+  html {
+    min-width: 420px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionContainer {
+    padding: 0;
+  }
+
+  .skillsText {
+    padding-bottom: 320px;
+  }
+
+.iconGallery {
+  height: unset;
+}
+
+.iconGallery img, .iconGallery img:hover {
+    width: 80px;
+    height: 70px;
+    margin: 0;
+}
+
+.navText p {
+  font-size:.6rem;
+}
+
+  .titleList {
+    transform:scale(.65);
+  }
+
+  .sectionText {
+    border-radius: unset;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: none;
+  }
+
+  .rightSkillsBox {
+    width: 100%;
+  }
+
+  .figContainer {
+    border-radius: 0;
+  }
+
+  .portItem {
+    padding: 0;
+  }
+
+  .featureList {
+    .featureItem {
+>>>>>>> 1c04e16ccc1e79bb81c87569338d65cc46fd2b8e
       width: 100%;
       margin-right: 0
     }
     .portLink {
       text-align: center
     }
+<<<<<<< HEAD
     .portLink i {
       width: 100%;
       margin: 0 auto
     }
     .portLink h6 {
       font-size: .5rem
+=======
+  }
+  .portLink {
+    text-align:center;
+    i {
+      width:100%;
+      margin: 0 auto;
+>>>>>>> 1c04e16ccc1e79bb81c87569338d65cc46fd2b8e
     }
     footer {
       letter-spacing: .1rem
