@@ -3,13 +3,7 @@
     max-width: 1024px
   }
   .mainNav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-<<<<<<< HEAD
-    -webkit-transition: background-color .5s, height .5s;
-    -o-transition: background-color .5s, height .5s;
     transition: background-color .5s, height .5s;
     padding: 0 20px
   }
@@ -22,26 +16,8 @@
     margin-right: 0;
     text-align: center;
     display: none;
-    -webkit-transition: height .5s, opacity .5s, margin-top .5s;
-    -o-transition: height .5s, opacity .5s, margin-top .5s;
     transition: height .5s, opacity .5s, margin-top .5s
   }
-=======
-    transition: background-color 0.5s 0.5s, height 0.5s 0.5s;
-    padding: 0 20px;
-    ul {
-      width:100%;
-    }
-    h4 {
-      margin-top: 15px;
-      margin-left: 0;
-      margin-right:0;
-      text-align:center;
-      transition: height 0.5s, opacity 0.5s, margin-top 0.5s;
-    }
-  }
-
->>>>>>> 1c04e16ccc1e79bb81c87569338d65cc46fd2b8e
   .scrollDown {
     height: 70px
   }
@@ -68,8 +44,6 @@
   .centerHeaderItems {
     width: 100%;
     height: 310px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between
   }
   .myPicContainer {
@@ -77,7 +51,6 @@
   }
   .myPicContainer img {
     height: 400px;
-    -o-object-fit: cover;
     object-fit: cover;
     width: 300px
   }
@@ -99,8 +72,6 @@
   }
   .headerTitles {
     width: 100%;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end
   }
   .headerTitles h3 {
@@ -114,8 +85,6 @@
     width: 225px;
     height: 225px;
     margin-bottom: 15px;
-    -webkit-transform: unset;
-    -ms-transform: unset;
     transform: unset
   }
   .axolotl {
@@ -128,15 +97,8 @@
     position: absolute;
     width: calc(100% - 40px);
     height: calc(100% - 420px);
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 30px
   }
@@ -148,46 +110,30 @@
     margin: 0 auto
   }
   .navText {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 15px;
     top: calc(100vh - 50px);
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     height: 50px
   }
   .figContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column
   }
   .portItem:nth-child(n) .portImage {
-    -webkit-box-ordinal-group: unset;
-    -ms-flex-order: unset;
     order: unset;
     width: 100%;
     height: 300px
   }
   .portItem:nth-child(n) .portText {
     width: 100%;
-    -webkit-box-ordinal-group: unset;
-    -ms-flex-order: unset;
     order: unset
   }
   .portItem:nth-child(n) h4 {
     text-align: center
   }
   .sectionContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column
   }
   .sectionText {

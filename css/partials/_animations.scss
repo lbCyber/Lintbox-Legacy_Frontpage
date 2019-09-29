@@ -300,6 +300,40 @@
 }
 
 
+/* 	CLASSES TOGGLED VIA JAVASCRIPT	*/
+
+.bar1Click {
+  animation: navClickAnimBar1 ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+.bar2Click {
+  animation: navClickAnimBar2 ease-in-out 1s;
+  animation-fill-mode: forwards;
+  background-image: url("../assets/navarrow.svg");
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+}
+
+.bar3Click {
+  animation: navClickAnimBar3 ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+.mobileNavButtonClick,
+.bar1Click,
+.bar2Click .bar3Click {
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+.mobileNavButtonClick {
+  animation: navClickAnim ease-in-out 1s;
+  animation-fill-mode: forwards;
+}
+
+
 /*  ANIMATION KEYFRAMES  */
 
 @keyframes bubble {

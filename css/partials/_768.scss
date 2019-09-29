@@ -36,7 +36,7 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     ul {
       flex-direction: column;
       align-items: center;
-      margin: 80px 0 0 0;
+      margin: 80px git st0 0 0;
       border-bottom-left-radius: 20px;
       .mainNavItem {
         width: 90%;
@@ -90,36 +90,8 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     border-bottom: 4px solid #48a0f0;
     // border-radius: 10px;
   }
-  /* 	CLASSES TOGGLED VIA JAVASCRIPT	*/
-  .bar1Click {
-    animation: navClickAnimBar1 ease-in-out 1s;
-    animation-fill-mode: forwards;
-  }
-  .bar2Click {
-    animation: navClickAnimBar2 ease-in-out 1s;
-    animation-fill-mode: forwards;
-    background-image: url("../assets/navarrow.svg");
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-  }
-  .bar3Click {
-    animation: navClickAnimBar3 ease-in-out 1s;
-    animation-fill-mode: forwards;
-  }
   .mainNavClick {
     right: 0;
-  }
-  .mobileNavButtonClick,
-  .bar1Click,
-  .bar2Click .bar3Click {
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-    // transition: all 2s;
-  }
-  .mobileNavButtonClick {
-    animation: navClickAnim ease-in-out 1s;
-    animation-fill-mode: forwards;
   }
   .learnMore {
     margin: 5% 0
@@ -148,35 +120,22 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     margin: 0
   }
   .toolKit {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
     order: 2
   }
   .axoLogo {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
     order: 1
   }
   .axoLogo:hover .axolotl,
   .axolotl {
     background-image: url(../assets/axologosmile.svg);
-    -webkit-transform: rotate(1deg);
-    -ms-transform: rotate(1deg);
     transform: rotate(1deg);
     background-size: 170px;
-    -webkit-transition: background-size .6s cubic-bezier(.5, 10, .5, 10), -webkit-transform .6s cubic-bezier(.5, -5, .5, 5);
-    transition: background-size .6s cubic-bezier(.5, 10, .5, 10), -webkit-transform .6s cubic-bezier(.5, -5, .5, 5);
-    -o-transition: background-size .6s cubic-bezier(.5, 10, .5, 10), transform .6s cubic-bezier(.5, -5, .5, 5);
     transition: background-size .6s cubic-bezier(.5, 10, .5, 10), transform .6s cubic-bezier(.5, -5, .5, 5);
-    transition: background-size .6s cubic-bezier(.5, 10, .5, 10), transform .6s cubic-bezier(.5, -5, .5, 5), -webkit-transform .6s cubic-bezier(.5, -5, .5, 5)
   }
   .axoLogo:hover .bubbles,
   .bubbles {
-    -webkit-animation-name: bubble;
     animation-name: bubble;
-    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards
   }
   .portText {
@@ -189,9 +148,6 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     height: 60px
   }
   .sectionContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column
   }
   .sectionText {
@@ -212,9 +168,6 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     display: none
   }
   .centerHeaderItems {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     height: 225px
   }
@@ -225,8 +178,6 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     font-size: 3.2rem
   }
   .headerText {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     height: 100%;
     margin: 0;
@@ -235,24 +186,18 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
   .headerText h1,
   .headerText h2 {
     width: 100%;
-    -ms-flex-item-align: start;
     align-self: flex-start;
     padding-left: 25px;
     line-height: 70px
   }
   .navText {
     font-size: .8rem;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     top: calc(100vh - 80px)
   }
   .navText p {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
     order: 2;
     width: 50%;
-    -webkit-transition: opacity .5s, height .5s;
-    -o-transition: opacity .5s, height .5s;
     transition: opacity .5s, height .5s
   }
   .navText p:first-child {
@@ -287,13 +232,9 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     height: calc(100% - 370px)
   }
   .socialButtons {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
     order: 1;
     width: 100%;
     text-align: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex
   }
   .socialButtons div:first-child {
@@ -304,15 +245,8 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     margin-right: 0
   }
   .headerTitles {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: unset;
-    -ms-flex-pack: unset;
     justify-content: unset;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center
   }
   .headerTitles h3 {
@@ -320,8 +254,6 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     font-size: 1.5rem
   }
   .titleList {
-    -webkit-transform: scale(.8);
-    -ms-transform: scale(.8);
     transform: scale(.8)
   }
   .portGallery {

@@ -1,0 +1,39 @@
+@media screen and (max-height:690px) {
+  .navText {
+    font-size: 0.8rem;
+    background-color: rgba(17, 17, 17, 0.9);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 15px;
+    top: calc(100vh - 40px);
+    align-items: center;
+    height: 50px;
+    border-radius: 0;
+  }
+  .socialButtons {
+    order: 1;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    font-size: 1.4rem;
+  }
+  .socialButtons div:first-child {
+    margin-left: 0
+  }
+  .socialButtons div:last-child {
+    margin-left: auto;
+    margin-right: 0
+  }
+  .navText p {
+    order: 2;
+    width: 50%;
+    transition: opacity .5s, height .5s
+  }
+  .navText p:first-child {
+    text-align: left
+  }
+  .navText p:last-child {
+    text-align: right
+  }
+}
