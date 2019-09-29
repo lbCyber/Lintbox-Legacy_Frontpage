@@ -299,6 +299,7 @@
   animation: r_anim infinite forwards 20s;
 }
 
+
 /*  ANIMATION KEYFRAMES  */
 
 @keyframes bubble {
@@ -435,8 +436,7 @@
 }
 
 @keyframes a_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 0;
@@ -474,8 +474,7 @@
 }
 
 @keyframes n_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 34px;
@@ -513,8 +512,7 @@
 }
 
 @keyframes i_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 70px;
@@ -552,8 +550,7 @@
 }
 
 @keyframes m_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 84px;
@@ -591,8 +588,7 @@
 }
 
 @keyframes a2_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 128px;
@@ -630,8 +626,7 @@
 }
 
 @keyframes t_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 157px;
@@ -735,8 +730,7 @@
 }
 
 @keyframes r_anim {
-  0% {
-  }
+  0% {}
   54% {
     bottom: 242px;
     left: 219px;
@@ -830,8 +824,7 @@
   30% {
     opacity: 0;
   }
-  100% {
-  }
+  100% {}
 }
 
 @keyframes linesHor2 {
@@ -860,8 +853,7 @@
   30% {
     opacity: 0;
   }
-  100% {
-  }
+  100% {}
 }
 
 @keyframes linesVer1 {
@@ -890,8 +882,7 @@
   30% {
     opacity: 0;
   }
-  100% {
-  }
+  100% {}
 }
 
 @keyframes linesVer2 {
@@ -920,8 +911,7 @@
   30% {
     opacity: 0;
   }
-  100% {
-  }
+  100% {}
 }
 
 @keyframes navClickAnim {
@@ -942,10 +932,10 @@
     transform: translateY(0);
   }
   45% {
-    transform: translateY(8px);
+    transform: translateY(11px);
     opacity: 1;
   }
-  46%,
+  45.1%,
   100% {
     opacity: 0;
   }
@@ -954,19 +944,19 @@
 @keyframes navClickAnimBar2 {
   0%,
   49% {
-    padding-top: 0;
-    background-position-y: 20px;
+    padding-top: 0px;
+    background-position-y: 25px;
     transform: translateY(0);
   }
   50% {
-    padding-top: 25px;
-    background-position-y: 20px;
-    transform: translateY(-10px);
+    padding-top: 35px;
+    background-position-y: 25px;
+    transform: translateY(-25px);
   }
   100% {
-    padding-top: 25px;
+    padding-top: 35px;
     background-position-y: 0;
-    transform: translateY(-10px);
+    transform: translateY(-18px);
   }
 }
 
@@ -976,10 +966,10 @@
     transform: translateY(0);
   }
   45% {
-    transform: translateY(-8px);
+    transform: translateY(-11px);
     opacity: 1;
   }
-  46%,
+  45.1%,
   100% {
     opacity: 0;
   }

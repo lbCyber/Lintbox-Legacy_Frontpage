@@ -1,77 +1,70 @@
-@media screen and (max-width: 420px) {
-  body {
-    min-width: 320px;
-  }
-
-  .sectionTitle {
-    font-size: 2.5rem;
-  }
-
-  .sectionContainer {
-    padding: 0;
-  }
-
-  .skillsText {
-    padding-bottom: 320px;
-  }
-
-.iconGallery {
-  height: unset;
-}
-
-.iconGallery img, .iconGallery img:hover {
-    width: 80px;
-    height: 70px;
-    margin: 0;
-}
-
-.navText p {
-  font-size:.6rem;
-}
-
-  .titleList {
-    transform:scale(.65);
-  }
-
-  .sectionText {
-    border-radius: unset;
-    padding-left: 5px;
-    padding-right: 5px;
-    background: none;
-  }
-
-  .rightSkillsBox {
-    width: 100%;
-  }
-
-  .figContainer {
-    border-radius: 0;
-  }
-
-  .portItem {
-    padding: 0;
-  }
-
-  .featureList {
-    .featureItem {
+  @media screen and (max-width:420px) {
+    // .mainNav .mainNavItem {
+    //   width: 50%
+    // }
+    .sectionTitle {
+      font-size: 2.5rem
+    }
+    .sectionContainer {
+      padding: 0
+    }
+    .skillsText {
+      padding-bottom: 320px
+    }
+    .iconGallery {
+      height: unset
+    }
+    .iconGallery img,
+    .iconGallery img:hover {
+      width: 80px;
+      height: 70px;
+      margin: 0
+    }
+    .navText p {
+      font-size: .6rem
+    }
+    .titleList {
+      -webkit-transform: scale(.65);
+      -ms-transform: scale(.65);
+      transform: scale(.65)
+    }
+    .sectionText {
+      border-radius: unset;
+      padding-left: 5px;
+      padding-right: 5px;
+      background: 0 0
+    }
+    .rightSkillsBox {
+      width: 100%
+    }
+    .figContainer {
+      border-radius: 0
+    }
+    .portItem {
+      padding: 0
+    }
+    .featureList .featureItem {
       width: 100%;
-      margin-right: 0;
+      margin-right: 0
     }
-    .featureOrigAPI {
+    .portLink {
+      text-align: center
+    }
+    .portLink i {
       width: 100%;
+      margin: 0 auto
+    }
+    .portLink h6 {
+      font-size: .5rem
+    }
+    footer {
+      letter-spacing: .1rem
     }
   }
-  .portLink {
-    text-align:center;
-    i {
-      width:100%;
-      margin: 0 auto;
-    }
-    h6 {
-      font-size:.5rem;
+  
+  @media screen and (max-width:340px) {
+    html {
+      min-width: 340px;
+      overflow-x: scroll;
     }
   }
-  footer {
-    letter-spacing: .1rem;
-  }
-}

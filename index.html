@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Welcome to lintbox.com!</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Special+Elite|Heebo" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -17,8 +16,13 @@
   <a href="#about" class="skipbox button">Skip to main content.</a>
   <a href="#contact" class="skipbox button">Skip to contact form.</a>
   <header>
+    <div class="mobileNavButton" aria-hidden>
+      <div class="mobileBar bar1"></div>
+      <div class="mobileBar bar2"></div>
+      <div class="mobileBar bar3"></div>
+    </div>
     <nav class="mainNav">
-      <h4>Lintbox.</h4>
+      <h4 class="lintboxFlag">Lintbox.</h4>
       <ul>
         <li class="mainNavItem"><button class="aboutButton navButton">&lt;about me/&gt;</button></li>
         <li class="mainNavItem"><button class="skillsButton navButton">&lt;my skills/&gt;</button></li>
@@ -74,12 +78,8 @@
               <span class="line line10" aria-hidden></span>
             </li>
             <li class="programmerTitle">&gt;programmer<span class='caret' aria-hidden></span></li>
-            <li class="animatorTitle" aria-label="animator"><span class="anim_a animLetters" aria-hidden>a</span><span
-                class="anim_n animLetters" aria-hidden>n</span><span class="anim_i animLetters"
-                aria-hidden>i</span><span class="anim_m animLetters" aria-hidden>m</span><span
-                class="anim_a2 animLetters" aria-hidden>a</span><span class="anim_t animLetters"
-                aria-hidden>t</span><span class="anim_o animLetters" aria-hidden>o</span><span
-                class="anim_r animLetters" aria-hidden>r</span></li>
+            <li class="animatorTitle" aria-label="animator"><span class="anim_a animLetters" aria-hidden>a</span><span class="anim_n animLetters" aria-hidden>n</span><span class="anim_i animLetters" aria-hidden>i</span><span class="anim_m animLetters" aria-hidden>m</span><span class="anim_a2 animLetters"
+                aria-hidden>a</span><span class="anim_t animLetters" aria-hidden>t</span><span class="anim_o animLetters" aria-hidden>o</span><span class="anim_r animLetters" aria-hidden>r</span></li>
             <li class="storytellerTitle">storyteller <span class="story" aria-hidden></span></li>
             <li class="personTitle">person <span class="flag" aria-hidden></span></li>
             <li>developer</li>
@@ -99,26 +99,19 @@
         <div class="sectionText">
           <h5>Hey there!</h5>
           <p>I'm a multi-skilled front-end developer and writer based in Toronto, Canada.</p>
-          <p>I'm always refining my skills as a creator and as both a front-end and back-end developer. Below you can
-            see just a small glimpse of the work I've done as a front-end developer, applying my past skills in print
-            design, graphic design, animation, and photography!</p>
+          <p>I'm always refining my skills as a creator and as both a front-end and back-end developer. Below you can see just a small glimpse of the work I've done as a front-end developer, applying my past skills in print design, graphic design, animation,
+            writing, and photography!</p>
           <h5 class="mobileExclude">What's your story?</h5>
-          <p class="mobileExclude">Born and raised in Niagara Falls, a I grew I found myself in love with the city of
-            Toronto, studying at prestigious schools
-            including University of Toronto, Humber College, and HackerYou.</p>
-          <p>I have years of experience freelancing as a web developer for small businesses and non-profits, as well
-            as a copy editor and writer, trading largely with local publications.</p>
+          <p class="mobileExclude">Born and raised in Niagara Falls, I eventually found myself in love with the city of Toronto, studying at prestigious schools including <a href="http://utoronto.ca" target="_blank">University of Toronto</a>, <a href="http://humber.ca" target="_blank">Humber College</a>,
+            and <a href="https://junocollege.com" target="_blank">Juno</a> (formerly <a href="https://hackeryou.com" target="_blank">HackerYou</a>).</p>
+          <p>I have years of experience freelancing as a web developer for small businesses and non-profits, as well as a copy editor and writer, trading largely with local publications.</p>
           <h5 class="mobileExclude">Okay, but what else?</h5>
-          <p>Having graduated from HackerYou's immersive front-end development program, I have become a highly-skilled
-            and dedicated front-end developer, with a deeply-rooted love for what I do.</p>
-          <p>I have an indomitable passion for giving back to the LGBTQ community, of which I owe so much, and love
-            working with people and working toward making the world a better place through both charity foundations
-            and advocacy.</p>
-          <p>Most of all, I am dedicated to growing as a person and becoming better every day, however I can. I have a
-            genuine love of all people and will always go out of my way to provide whatever support I can for those in
-            need.</p>
-          <p class="mobileExclude">So if you have anything you'd like to talk about, please <a
-              href="mailto:paul@lintbox.com">contact
+          <p>Having graduated from <a href="http://junocollege.com">Juno</a>'s immersive front-end development program, I have become a highly-skilled and dedicated front-end developer, with a deeply-rooted love for what I do.</p>
+          <p>I have an indomitable passion for giving back to the LGBTQ community, of which I owe so much, and love working with people and working toward making the world a better place through both charity foundations and advocacy.</p>
+          <p>Most of all, I am dedicated to growing as a person and becoming better every day, however I can. I have a genuine love of all people and will always go out of my way to provide whatever support I can for those in need.
+          </p>
+          <h6 class="ds">(Also I'm pretty good at Dark Souls)</h6>
+          <p class="mobileExclude">So if you have anything you'd like to talk about, please <a href="mailto:paul@lintbox.com">contact
               me!</a>
         </div>
       </div>
@@ -129,24 +122,17 @@
       <h4 class="sectionTitle" aria-hidden>&lt;skills/&gt;</h4>
       <div class="wrapper sectionContainer">
         <div class="skillsText sectionText">
-          <h5 class="mobileExclude">Born a creator</h5>
-          <p class="mobileExclude">I consider myself a life-long creator and a veteran in web development (though one
-            who is constantly
-            learning and improving). </p>
-          <p>My philosophy in design has always been to challenge myself and invent new and ambitious ways of developing
-            content. In web development in particular, I pride myself in avoiding prefabs and third-party libraries
-            whenever possible; if it's something I can learn to do myself, that's what I'm going to do.</p>
-          <h5 class="mobileExclude">Born a programmer</h5>
-          <p>My experience as a programmer began at an early age, when I would explore the inner workings of DOS and
-            write small games using chains of batch scripts.</p>
-          <p>Since then, I have expanded on and improved my skills and abilities on my own as a self-taught coder with
-            experience in languages including HTML, CSS, Javascript, PHP, Python, and C.</p>
-          <h5 class="mobileExclude">Born an artist</h5>
-          <p>On the design side of web development, as the son of an art teacher, I had always possessed a certain
-            ability for visual arts and layout. Throughout my life I have constantly worked to improve my aptitude in
-            digital graphics and animation, as well as my instincts in colours and form. With a formal education in
-            print design and layout, I've used my collection of abilities to always come up with new and interesting
-            ways of developing exciting web sites and applications.</p>
+          <h5 class="mobileExclude">I am a creator</h5>
+          <p class="mobileExclude">I consider myself a life-long creator and a veteran in web development (though one who is constantly learning and improving). </p>
+          <p>My philosophy in design has always been to challenge myself and invent new and ambitious ways of developing content. In web development in particular, I pride myself in avoiding prefabs and third-party libraries in my own personal work; if it's
+            something I can learn to do myself, that's what I'm going to do.</p>
+          <p>That isn't to say I don't have experience with libraries, though! I often work with the more essential Javascript libraries, including jQuery and React.js</p>
+          <h5 class="mobileExclude">I am a programmer</h5>
+          <p>My experience as a programmer began at an early age, when I would explore the inner workings of DOS and write small games using chains of batch scripts.</p>
+          <p>Since then, I have expanded on and improved my skills and abilities on my own as a self-taught coder with experience in languages including HTML, CSS, Javascript, PHP, Python, and C.</p>
+          <h5 class="mobileExclude">I am an artist</h5>
+          <p>On the design side of web development, as the son of an art teacher, I had always possessed a certain ability for visual arts and layout. Throughout my life I have constantly worked to improve my aptitude in digital graphics and animation, as
+            well as my instincts in colours and form. With a formal education in print design and layout, I've used my collection of abilities to always come up with new and interesting ways of developing exciting web sites and applications.</p>
         </div>
         <div class="rightSkillsBox">
           <div class="avContainer axoLogo">
@@ -192,9 +178,13 @@
                 <img src="./assets/port-haiku.jpg" alt="Screenshot of my haiku generator project">
                 <div class="siteLink">
                   <div class="portLink">
-                    <a href="https://lintbox.com/haiku" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://haiku.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/lbCyber/haiku_generator_react" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
                     </a>
                   </div>
                 </div>
@@ -203,19 +193,20 @@
                 <p>The Haiku generator was my first larger-scale web application, and one of my prouder accomplishments.
                 </p>
                 <p>Programmed entirely in Javascript, this project was a labour of love and my final piece for
-                  HackerYou's
-                  part-time web development program. The intent was to create a method of producing genuine,
-                  randomly-generated haikus faithful to the traditional Japanese style. Every line is chosen from a
-                  database
-                  of personally-written poetry, along with an accompanying, low-weight looping background animation.</p>
-                <p>The project took about a week to design and build, with additional time spent to refine and add to
-                  the
-                  overall product after completion.</p>
+                  <a href="https://junocollege.com" target="_blank">Juno</a>'s part-time web development program. The intent was to create a procedural method of producing genuine, randomly-generated haikus faithful to the traditional Japanese style.
+                  Every line is chosen from a database of personally-written poetry, along with an accompanying, low-weight looping background animation.</p>
+                <p>The project took about a week to design and build, with additional time spent to refine and add to the overall product after completion.</p>
+                <p>There are still issues I'm working to resolve, including caching issues that force the unloading of webm assets, but that only emboldens me to work harder and learn more.</p>
                 <div class="portLinks">
                   <div class="portLink">
-                    <a href="https://lintbox.com/haiku" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://haiku.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
+                    </a>
+                  </div>
+                  <div class="portLink">
+                    <a href="https://github.com/lbCyber/haiku_generator_react" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
+                      <!-- <h6 class="smallCaption">(unreleased React iteration)</h6> -->
                     </a>
                   </div>
                 </div>
@@ -223,53 +214,47 @@
             </div>
             <div class="featureList">
               <h6 class="featureItem featureAcc">Accessible</h6>
-              <h6 class="featureItem featureRes">Responsive Design</h6>
+              <h6 class="featureItem featureCSSAnim">Animations (CSS)</h6>
+              <h6 class="featureItem featureCookies">Cookies</h6>
               <h6 class="featureItem featureJS">Javascript/JSX</h6>
+              <h6 class="featureItem featureOrigAPI">Original API</h6>
               <h6 class="featureItem featureOrigD">Original design</h6>
-              <h6 class="featureItem featureOrigAPI">Original API framework</h6>
+              <h6 class="featureItem featureRes">Responsive Design</h6>
+              <h6 class="featureItem featureSocM">Social Media Integration</h6>
             </div>
           </figure>
           <figure class="portItem portfolioItem2">
             <h4>Scope Creep</h4>
             <div class="figContainer">
-              <div class="portImage"><img src="./assets/port-scope.jpg"
-                  alt="Screenshot of my interactive narrative app">
+              <div class="portImage"><img src="./assets/port-scope.jpg" alt="Screenshot of my interactive narrative app">
                 <div class="siteLink">
                   <div class="portLink">
-                    <a href="https://lintbox.com/sc" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
+                    <a href="https://sc.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/paul-rocca-project-3" target="_blank"><i
-                        class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/lbCyber/paul-rocca-project-3" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="portText">
-                <p>Scope Creep has been my most ambitious project to date, and a piece I'm constantly working on and
-                  improving. It currently exists a proof-of-concept story-telling framework running a work-in-progress
-                  story.</p>
-                <p>Built in Javascript, this served as my entry into developing an API for my purposes, designed with
-                  future expandability in mind. This API permits the developer to produce their own
-                  story with a simple and easy-to-understand interface, though with a powerful choice-based system.</p>
-                <p>It was a lot of fun to make, and offered me a chance to try out new ideas for styling effects in
-                  CSS, including scanlines, image artifacting, and pixelation. The 'Options' button provides the user
-                  with their choice of traditional computer terminals for the styles to emulate, including a plaintext
-                  option as an accessibility feature.</p>
+                <p>Scope Creep has been my most ambitious project to date, and a piece I'm constantly working on and improving. It currently exists a proof-of-concept story-telling framework running a work-in-progress story.
+                </p>
+                <p>Built in Javascript, this served as my entry into developing an API for my purposes, designed with future expandability in mind. This API permits the developer to produce their own story with a simple and easy-to-understand interface,
+                  though with a powerful choice-based system.</p>
+                <p>It was a lot of fun to make, and offered me a chance to try out new ideas for styling effects in CSS, including scanlines, image artifacting, and pixelation. The 'Options' button provides the user with their choice of traditional computer
+                  terminals for the styles to emulate, including a plaintext option as an accessibility feature.</p>
                 <div class="portLinks">
                   <div class="portLink">
-                    <a href="https://lintbox.com/sc" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
+                    <a href="https://sc.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/paul-rocca-project-3" target="_blank"><i
-                        class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/lbCyber/paul-rocca-project-3" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
@@ -278,54 +263,42 @@
             </div>
             <div class="featureList">
               <h6 class="featureItem featureAcc">Accessible</h6>
-              <h6 class="featureItem featureRes">Responsive Design</h6>
+              <h6 class="featureItem featureCSS">Advanced CSS Styles</h6>
               <h6 class="featureItem featureJS">Javascript/JSX</h6>
+              <h6 class="featureItem featureOrigAPI">Original API</h6>
               <h6 class="featureItem featureOrigD">Original design</h6>
-              <h6 class="featureItem featureOrigAPI">Original API framework</h6>
+              <h6 class="featureItem featureRes">Responsive Design</h6>
             </div>
           </figure>
           <figure class="portItem portfolioItem3">
             <h4>Movie Night</h4>
             <div class="figContainer">
-              <div class="portImage"><img src="./assets/port-movie.jpg"
-                  alt="Screenshot of a collaborative movie-picker app">
+              <div class="portImage"><img src="./assets/port-movie.jpg" alt="Screenshot of a collaborative movie-picker app">
                 <div class="siteLink">
                   <div class="portLink">
-                    <a href="https://lintbox.com/movie-night" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://movie-night.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/movie-night/movie-night-project-4" target="_blank"><i
-                        class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/movie-night/movie-night-project-4" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="portText">
-                <p>Movie Night was a collaborative project with the purpose of using a chosen third-party API to render
-                  a
-                  small and fun application.</p>
-                <p>Movie Night's premise is simple: Provide the user with a randomly-picked movie recommendation based
-                  on
-                  a chosen genre, preferred age, and preferred quality (lower-quality movies having the 'I wanna watch
-                  something trashy' tagline).</p>
-                <p>We used <a href="http://themoviedb.org" target="_blank">theMovieDB.org</a>'s API for this purpose,
-                  and
-                  developed a clean, Kodi-inspired design as its output.</p>
+                <p>Movie Night was a collaborative project with the purpose of using a chosen third-party API to render a small and fun application.</p>
+                <p>Movie Night's premise is simple: Provide the user with a randomly-picked movie recommendation based on a chosen genre, preferred age, and preferred quality (lower-quality movies having the 'I wanna watch something trashy' tagline).</p>
+                <p>We used <a href="http://themoviedb.org" target="_blank">theMovieDB.org</a>'s API for this purpose, and developed a clean, Kodi-inspired design as its output.</p>
                 <div class="portLinks">
                   <div class="portLink">
-                    <a href="https://lintbox.com/movie-night" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://movie-night.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/movie-night/movie-night-project-4" target="_blank"><i class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/movie-night/movie-night-project-4" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
@@ -334,53 +307,46 @@
             </div>
             <div class="featureList">
               <h6 class="featureItem featureAcc">Accessible</h6>
-              <h6 class="featureItem featureRes">Responsive Design</h6>
-              <h6 class="featureItem featureJS">Javascript/JSX</h6>
-              <h6 class="featureItem featureOrigD">Original design</h6>
-              <h6 class="featureItem feature3rdPAPI">Third-party API usage</h6>
               <h6 class="featureItem featureCollab">Collaborative work</h6>
+              <h6 class="featureItem featureJS">Javascript/JSX</h6>
+              <h6 class="featureItem featurePair">Pair Programming</h6>
+              <h6 class="featureItem featureOrigD">Original design</h6>
+              <h6 class="featureItem featureRes">Responsive Design</h6>
+              <h6 class="featureItem featureREST">REST API</h6>
+              <h6 class="featureItem feature3rdPAPI">Third-party API usage</h6>
             </div>
           </figure>
           <figure class="portItem portfolioItem4">
             <h4>Cronus (PSD)</h4>
             <div class="figContainer">
-              <div class="portImage"><img src="./assets/port-cronus.jpg"
-                  alt="Screenshot of my Cronus-Business PSD conversion">
+              <div class="portImage"><img src="./assets/port-cronus.jpg" alt="Screenshot of my Cronus-Business PSD conversion">
                 <div class="siteLink">
                   <div class="portLink">
-                    <a href="https://lintbox.com/cronus-business" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://cronus-business.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://lintbox.com/cronus-business/psd.jpg" target="_blank"><i class="fas fa-file-image"
-                        aria-hidden></i>
+                    <a href="https://cronus-business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
                       <h6>View PSD</h6>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="portText">
-                <p>Cronus is a large, single-page spread mockup, and only the second PSD conversion I had ever
-                  attempted.
+                <p>Cronus is a large, single-page spread mockup, and only the second PSD conversion I had ever attempted.
                 </p>
-                <p>My personal challenge in this PSD conversion was to add an additional challenge of adding features
-                  and elements not necessarily breaking faithfulness to the original.</p>
-                <p>Though very minimal repsonsiveness was implemented (as was instructed), I'm proud of the things I
-                  learned through this exercise and the new and interesting design tricks I had implemented.</p>
-                <p>Overall, developing this site, though not of my own original design, was a fun experience and allowed
-                  me to test my creativity in ways I hadn't often explored.</p>
+                <p>My personal challenge in this PSD conversion was to add an additional challenge of adding features and elements not necessarily breaking faithfulness to the original.</p>
+                <p>Though very minimal responsiveness was implemented (as was instructed), I'm proud of the things I learned through this exercise and the new and interesting design tricks I had implemented.</p>
+                <p>Overall, developing this site, though not of my own original design, was a fun experience and allowed me to test my creativity in ways I hadn't often explored.</p>
                 <div class="portLinks">
                   <div class="portLink">
-                    <a href="https://lintbox.com/cronus-business" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://cronus-business.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://lintbox.com/cronus-business/psd.jpg" target="_blank"><i class="fas fa-file-image"
-                        aria-hidden></i>
+                    <a href="https://cronus.business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
                       <h6>View PSD</h6>
                     </a>
                   </div>
@@ -389,31 +355,28 @@
             </div>
             <div class="featureList">
               <h6 class="featureItem featureAcc">Accessible</h6>
+              <h6 class="featureItem featureForms">Forms</h6>
+              <h6 class="featureItem featurePSD">PSD Conversion</h6>
               <h6 class="featureItem featureRes">Responsive (Partial)</h6>
-              <h6 class="featureItem featureRes">PSD Conversion</h6>
             </div>
           </figure>
           <figure class="portItem portfolioItem5">
             <h4>Foot-Forward (PSD)</h4>
             <div class="figContainer">
-              <div class="portImage"><img src="./assets/port-foot.jpg"
-                  alt="Screenshot of my foot-forward PSD conversion">
+              <div class="portImage"><img src="./assets/port-foot.jpg" alt="Screenshot of my foot-forward PSD conversion">
                 <div class="siteLink">
                   <div class="portLink">
-                    <a href="https://lintbox.com/foot-forward" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://foot-forward.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/paulRoccaProjectOne" target="_blank"><i class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/lbCyber/paulRoccaProjectOne" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://lintbox.com/foot-forward/psd.jpg" target="_blank"><i class="fas fa-file-image"
-                        aria-hidden></i>
+                    <a href="https://foot-forward.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
                       <h6>View PSD</h6>
                     </a>
                   </div>
@@ -422,30 +385,22 @@
               <div class="portText">
                 <p>Foot-Forward is another PSD conversion site I found interesting and fulfilling to work on.</p>
                 <p>The reason is, specifically, because of the limitations imposed in the exercise: Objects
-                  <em>must</em>
-                  be aligned using only floats. That meant taking a careful approach to ensure that collisions between
-                  objects
-                  wouldn't happen. With the additional factor of making the site fully responsive, this conversion was a
-                  lot of work to
-                  pull off, despite the very simple aesthetic.</p>
-                <p>Ultimately the work I've found most rewarding are those not necessarily the most aesthetically-rich,
-                  but that provide the greatest learning experience.</p>
+                  <em>must</em> be aligned using only floats. That meant taking a careful approach to ensure that collisions between objects wouldn't happen. With the additional factor of making the site fully responsive, this conversion was a lot of
+                  work to pull off, despite the very simple aesthetic.</p>
+                <p>Ultimately the work I've found most rewarding are those not necessarily the most aesthetically-rich, but that provide the greatest learning experience.</p>
                 <div class="portLinks">
                   <div class="portLink">
-                    <a href="https://lintbox.com/foot-forward" target="_blank"><i class="fas fa-broadcast-tower"
-                        aria-hidden></i>
+                    <a href="https://foot-forward.lintbox.com" target="_blank"><i class="fas fa-broadcast-tower" aria-hidden></i>
                       <h6>View live site</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/paulRoccaProjectOne" target="_blank"><i class="fab fa-github-square"
-                        aria-hidden></i>
+                    <a href="https://github.com/lbCyber/paulRoccaProjectOne" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
                       <h6>View git repo</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://lintbox.com/foot-forward/psd.jpg" target="_blank"><i class="fas fa-file-image"
-                        aria-hidden></i>
+                    <a href="https://foot-forward.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
                       <h6>View PSD</h6>
                     </a>
                   </div>
@@ -454,8 +409,8 @@
             </div>
             <div class="featureList">
               <h6 class="featureItem featureAcc">Accessible</h6>
+              <h6 class="featureItem featurePSD">PSD Conversion</h6>
               <h6 class="featureItem featureRes">Responsive Design</h6>
-              <h6 class="featureItem featureRes">PSD Conversion</h6>
             </div>
           </figure>
         </div>

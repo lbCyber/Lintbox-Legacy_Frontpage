@@ -1,16 +1,13 @@
 /*  BASE IMPORTS  */
 
 @import "partials/normalize";
-
 //  VARIABLES
-
 //..  FONTS
-
-$heebo: Heebo, sans-serif;
-$special: Special Elite, serif;
-
+$heebo: Heebo,
+sans-serif;
+$special: Special Elite,
+serif;
 //..  COLOURS
-
 $darkGrey: #3b3b3f; //     rgba(59,59,63,1.000)
 $faintBlue: #9c97c8; //    rgba(156,151,200,1.000)
 $faintGrey: #a3b2c4; //    rgba(163,178,196,1.000)
@@ -100,7 +97,23 @@ h6 {
   font-size: 0.6rem;
   line-height: 26px;
   color: $lightBlue;
+  &.ds {
+    font-size: .4rem;
+    color: #777;
+    text-align: center;
+    transform: translateY(-5px);
+    font-style: italic;
+    text-shadow: 0 0 5px #000
+  }
+  &.smallCaption {
+    font-size: .5rem;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    bottom: 8px;
+  }
 }
+
 
 /*  COMMON ELEMENTS */
 
@@ -117,7 +130,7 @@ button,
   color: $lightBlue;
   text-transform: lowercase;
   font-size: 1.4rem;
-  background: none;
+  background: rgba(0, 0, 0, .5);
   border: 0;
   box-shadow: inset 0 0 0 2px $lightBlue;
   position: relative;
@@ -128,6 +141,7 @@ button,
   text-align: center;
   transition: color 0.3s;
   margin: 0 5px;
+  cursor: pointer;
   &::before {
     border: 2px solid transparent;
     top: 0;
@@ -147,8 +161,7 @@ button,
     border-right-color: $amber;
     border-bottom-color: $amber;
     border-left-color: $amber;
-    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s,
-      border-bottom-color 0.15s linear 0.2s, border-left-color 0.15s linear 0.3s;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s, border-left-color 0.15s linear 0.3s;
   }
 }
 
@@ -168,10 +181,6 @@ button,
   display: flex;
   justify-content: space-between;
   z-index: 1;
-}
-
-.sectionText {
-  width: 70%;
 }
 
 section {
@@ -197,6 +206,7 @@ section {
   height: 150px;
 }
 
+
 /*	SKIP BOX  */
 
 .skipbox {
@@ -213,6 +223,7 @@ section {
   top: 0px;
 }
 
+
 /*  HEADER  */
 
 header {
@@ -220,6 +231,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 9999;
+  min-width: 340px;
 }
 
 .introSection {
@@ -230,21 +242,18 @@ header {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%),
-    linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%),
-    linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
+  background-image: linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%), linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
   overflow: hidden;
   min-height: 768px;
 }
 
 .mainNav {
-  height: 115px;
+  height: 85px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 0 40px;
-  background-color: transparent;
   transition: background-color 0.5s, height 0.5s;
   .navButton,
   .mainNavItem a {
@@ -273,6 +282,15 @@ header {
       color: #fff;
     }
   }
+}
+
+.scrollDownNav {
+  background-color: rgba(0, 0, 0, .8);
+  height: 65px;
+}
+
+.lintboxFlag {
+  padding-top: 10px;
 }
 
 .scrollDown {
@@ -372,10 +390,7 @@ header {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(-25deg, $darkGrey 0% 27.85%, transparent 28% 100%),
-    linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%),
-    linear-gradient(-80deg, rgba(163, 178, 196, 0.45) 0% 34.85%, transparent 35% 100%),
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-image: linear-gradient(-25deg, $darkGrey 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(163, 178, 196, 0.45) 0% 34.85%, transparent 35% 100%), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0.5;
@@ -462,6 +477,7 @@ header {
   margin-top: 5%;
 }
 
+
 /*  ABOUT */
 
 main {
@@ -486,9 +502,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-215deg, darken($darkGrey, 17%) 0% 27.9%, transparent 28% 100%),
-    linear-gradient(-245deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%),
-    linear-gradient(-185deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%);
+  background-image: linear-gradient(-215deg, darken($darkGrey, 17%) 0% 27.9%, transparent 28% 100%), linear-gradient(-245deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-185deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%);
 }
 
 .aboutText a {
@@ -497,6 +511,7 @@ main {
     color: $amber;
   }
 }
+
 
 /*  SKILLS  */
 
@@ -537,22 +552,29 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-125deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%),
-    linear-gradient(-145deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%),
-    linear-gradient(-55deg, darken($darkGrey, 17%) 0% 57.9%, transparent 58% 100%);
+  background-image: linear-gradient(-125deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%), linear-gradient(-145deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-55deg, darken($darkGrey, 17%) 0% 57.9%, transparent 58% 100%);
 }
+
 
 /*  PORTFOLIO */
 
 .sectionText {
+  width: 70%;
   overflow-y: auto;
-  background-color: rgba(163, 178, 196, 0.2);
+  background-color: rgba(50, 50, 50, 0.9);
   border-radius: 20px;
   padding: 30px;
   p {
-    font-size: 1rem;
+    font-size: .8rem;
     line-height: 1.4rem;
     margin-bottom: 0.8rem;
+  }
+  a {
+    color: $lightBlue;
+    transition: color .5s;
+    &:hover {
+      color: $amber;
+    }
   }
 }
 
@@ -563,7 +585,7 @@ main {
 }
 
 .figContainer {
-  background-color: rgba(150, 150, 175, 0.2);
+  background-color: rgba(50, 50, 50, 0.9);
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -614,9 +636,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-25deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%),
-    linear-gradient(-65deg, darken($darkSlate, 23%) 0% 29.85%, transparent 30% 100%),
-    linear-gradient(-80deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
+  background-image: linear-gradient(-25deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, darken($darkSlate, 23%) 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
   padding-bottom: 60px;
 }
 
@@ -649,12 +669,18 @@ main {
   a,
   a h6 {
     transition: color 0.5s;
+    text-shadow: 0 0 3px #000;
     &:hover h6 {
       color: $amber;
     }
   }
   .portLink {
-    max-width: 200px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 15px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -662,6 +688,7 @@ main {
   margin: 0 10px;
   font-size: 2rem;
   width: calc(100% / 3);
+  max-width: 125px;
   text-align: center;
 }
 
@@ -687,6 +714,7 @@ main {
     color: $lightBlue;
   }
 }
+
 .portLinks {
   display: flex;
   justify-content: flex-start;
@@ -743,6 +771,7 @@ main {
   }
 }
 
+
 /*  FOOTER  */
 
 footer {
@@ -779,10 +808,10 @@ footer {
   }
 }
 
+
 /*  OVERRIDE/RESPONSIVENESS/ANIMATION IMPORTS  */
 
 @import "partials/animations";
-@import "partials/1600";
 @import "partials/1280";
 @import "partials/1024";
 @import "partials/768";
