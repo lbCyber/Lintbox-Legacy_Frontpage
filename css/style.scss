@@ -78,7 +78,7 @@ h3 {
 
 h4 {
   font-family: $special;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 h5 {
@@ -204,6 +204,7 @@ section {
   cursor: default;
   z-index: 0;
   height: 150px;
+  transform: rotate(17deg);
 }
 
 
@@ -489,6 +490,7 @@ main {
   background-size: 100%;
   background-position: 50%;
   img {
+    border-radius: 150px;
     opacity: 1;
     transition: opacity 0.5s;
     &:hover {
@@ -614,10 +616,12 @@ main {
 }
 
 .portItem {
-  margin: 50px 0;
+  margin: 0 0 150px;
   width: 100%;
   h4 {
-    color: $lightBlue;
+    color: #fff;
+    margin: 0 0 20px;
+    font-size: 2.4rem;
   }
   &:nth-child(even) {
     h4 {

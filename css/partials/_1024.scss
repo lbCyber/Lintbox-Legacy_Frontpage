@@ -82,16 +82,8 @@
     width: 480px
   }
   .avContainer {
-    width: 225px;
-    height: 225px;
     margin-bottom: 15px;
-    transform: unset
-  }
-  .axolotl {
-    background-size: 195px
-  }
-  .axoLogo:hover .axolotl {
-    background-size: 196px
+    transform: scale(0.75) translateY(-42px);
   }
   .rightSkillsBox {
     position: absolute;
@@ -111,7 +103,7 @@
   }
   .navText {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     padding: 0 15px;
     top: calc(100vh - 50px);

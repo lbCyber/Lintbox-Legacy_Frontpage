@@ -34,13 +34,10 @@ $(function() {
       }
     }
   }
-
-  $('.mobileNavButton').on('click', () => {
-    console.log('blep')
+  $('.mobileNavButton').on('click', function() {
     navToggle()
   })
-  $('.mainNavItem').on('click', () => {
-    console.log('blep')
+  $('.mainNavItem').on('click', function() {
     navToggle()
   })
 });
