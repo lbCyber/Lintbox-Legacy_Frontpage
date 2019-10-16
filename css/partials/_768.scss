@@ -30,7 +30,7 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     height: 100vh;
     padding-bottom: 20vh;
     top: 0;
-    background-color: rgba(50, 50, 50, .95);
+    background-color: rgba(10, 10, 12, 0.99);
     right: -100%;
     ul {
       flex-direction: column;
@@ -199,28 +199,23 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
   .navText {
     font-size: .8rem;
     flex-wrap: wrap;
-    top: calc(100vh - 80px)
-  }
-  .navText p {
-    order: 2;
-    width: 50%;
-    transition: opacity .5s, height .5s
-  }
-  .navText p:first-child {
-    text-align: left
-  }
-  .navText p:last-child {
-    text-align: right
+    top: calc(100vh - 80px);
+    p {
+      transition: opacity .3s;
+    }
   }
   .scrollDown {
-    background-color: #000
+    background-color: #000;
+    .navText p {
+      opacity: 0;
+    }
   }
   .scrollDown .mainNavItem {
     margin-bottom: unset;
     margin-top: 5px
   }
   .scrollDownText {
-    top: calc(100vh - 40px)
+    top: calc(100vh - 50px)
   }
   .scrollDownText p {
     height: 0;

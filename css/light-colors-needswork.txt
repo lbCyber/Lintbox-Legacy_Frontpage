@@ -8,17 +8,17 @@ sans-serif;
 $special: Special Elite,
 serif;
 //..  COLOURS
-$darkGrey: #3b3b3f; //     rgba(59,59,63,1.000)
-$faintBlue: #9c97c8; //    rgba(156,151,200,1.000)
-$faintGrey: #a3b2c4; //    rgba(163,178,196,1.000)
-$darkSlate: #484a5f; //    rgba(72,74,95,1.000)
-$lightBlue: #48a0f0; //    rgba(72,160,240,1.000)
-$amber: #e99b36; //        rgba(233,155,54,1.000)
+$darkGrey: #ababaf; //     rgba(59,59,63,1.000)
+$faintBlue: #c8979c; //    rgba(156,151,200,1.000)
+$faintGrey: #636264; //    rgba(163,178,196,1.000)
+$darkSlate: #cac8c0; //    rgba(72,74,95,1.000)
+$lightBlue: #e99b36; //    rgba(72,160,240,1.000)
+$amber: #48a0f0; //        rgba(233,155,54,1.000)
 
 /*  BASE STYLES */
 
 * {
-  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
     width: 1rem;
@@ -27,7 +27,7 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
     opacity: 0;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 25px;
   }
 }
@@ -38,9 +38,9 @@ html {
 
 body {
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   position: relative;
-  background-color: #0f0f15;
+  background-color: #f0f0f5;
 }
 
 a,
@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-  color: #fff;
+  color: #000;
   font-size: 4rem;
 }
 
@@ -103,7 +103,7 @@ h6 {
     text-align: center;
     transform: translateY(-5px);
     font-style: italic;
-    text-shadow: 0 0 5px #000
+    text-shadow: 0 0 5px #fff
   }
   &.smallCaption {
     font-size: .5rem;
@@ -130,7 +130,7 @@ button,
   color: $lightBlue;
   text-transform: lowercase;
   font-size: 1.4rem;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(255, 255, 255, .5);
   border: 0;
   box-shadow: inset 0 0 0 2px $lightBlue;
   position: relative;
@@ -199,7 +199,7 @@ section {
   font-size: 6rem;
   opacity: 0.5;
   z-index: 0;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 10px #fff;
   user-select: none;
   cursor: default;
   z-index: 0;
@@ -216,7 +216,7 @@ section {
   top: -1000px;
   z-index: 999;
   border-width: 3px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 200px;
 }
 
@@ -243,7 +243,7 @@ header {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%), linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
+  background-image: linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%), linear-gradient(150deg, rgba(93, 78, 66, 0.03) 0% 34.85%, transparent 35% 100%);
   overflow: hidden;
   min-height: 768px;
 }
@@ -280,13 +280,13 @@ header {
     width: 30%;
     margin-left: 5%;
     &:hover {
-      color: #fff;
+      color: #000;
     }
   }
 }
 
 .scrollDownNav {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(255, 255, 255, .8);
   height: 65px;
 }
 
@@ -296,7 +296,7 @@ header {
 
 .scrollDown {
   height: 90px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .navText {
@@ -316,7 +316,7 @@ header {
 
 .scrollDownText {
   font-size: 0.8rem;
-  background-color: rgba(17, 17, 17, 0.9);
+  background-color: rgba(233, 233, 233, 0.9);
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -330,7 +330,6 @@ header {
 .socialButtons {
   font-size: 1.8rem;
   transition: font-size 0.5s;
-  margin-top: 8px;
   div a,
   div i {
     transition: color 0.5s;
@@ -350,8 +349,6 @@ header {
 
 .scrollDownText .socialButtons {
   font-size: 1.4rem;
-  padding-top: 4px;
-  margin-top: 0px;
 }
 
 .headerContainer {
@@ -394,7 +391,7 @@ header {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(-25deg, $darkGrey 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(163, 178, 196, 0.45) 0% 34.85%, transparent 35% 100%), linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-image: linear-gradient(-25deg, $darkGrey 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(93, 78, 66, 0.45) 0% 34.85%, transparent 35% 100%), linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
   background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0.5;
@@ -436,7 +433,7 @@ header {
   text-transform: uppercase;
   font-size: 2.5rem;
   overflow: hidden;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 50px;
   padding: 20px;
   position: relative;
@@ -468,7 +465,7 @@ header {
   position: absolute;
   left: 0;
   border-radius: 50px;
-  background-image: linear-gradient(#000 10%, transparent 33% 67%, #000 90%);
+  background-image: linear-gradient(#fff 10%, transparent 33% 67%, #fff 90%);
   z-index: 1;
 }
 
@@ -477,7 +474,7 @@ header {
   text-align: center;
   padding: 10px 20px;
   border-radius: 20px;
-  text-shadow: 0px 3px 8px black;
+  text-shadow: 0px 3px 8px #fff;
   margin-top: 5%;
 }
 
@@ -507,7 +504,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-215deg, darken($darkGrey, 17%) 0% 27.9%, transparent 28% 100%), linear-gradient(-245deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-185deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%);
+  background-image: linear-gradient(-215deg, darken($darkGrey, 17%) 0% 27.9%, transparent 28% 100%), linear-gradient(-245deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-185deg, rgba(93, 78, 66, 0.03) 0% 34.9%, transparent 35% 100%);
 }
 
 .aboutText a {
@@ -557,7 +554,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-125deg, rgba(163, 178, 196, 0.03) 0% 34.9%, transparent 35% 100%), linear-gradient(-145deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-55deg, darken($darkGrey, 17%) 0% 57.9%, transparent 58% 100%);
+  background-image: linear-gradient(-125deg, rgba(93, 78, 66, 0.03) 0% 34.9%, transparent 35% 100%), linear-gradient(-145deg, darken($darkSlate, 23%) 0% 29.9%, transparent 30% 100%), linear-gradient(-55deg, darken($darkGrey, 17%) 0% 57.9%, transparent 58% 100%);
 }
 
 
@@ -566,7 +563,7 @@ main {
 .sectionText {
   width: 70%;
   overflow-y: auto;
-  background-color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(210, 210, 210, 0.9);
   border-radius: 20px;
   padding: 30px;
   p {
@@ -590,7 +587,7 @@ main {
 }
 
 .figContainer {
-  background-color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(210, 210, 210, 0.9);
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -607,7 +604,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     text-align: center;
     padding: 15px;
@@ -622,7 +619,7 @@ main {
   margin: 0 0 150px;
   width: 100%;
   h4 {
-    color: #fff;
+    color: #000;
     margin: 0 0 20px;
     font-size: 2.4rem;
   }
@@ -643,7 +640,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(-25deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, darken($darkSlate, 23%) 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(163, 178, 196, 0.03) 0% 34.85%, transparent 35% 100%);
+  background-image: linear-gradient(-25deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%), linear-gradient(-65deg, darken($darkSlate, 23%) 0% 29.85%, transparent 30% 100%), linear-gradient(-80deg, rgba(93, 78, 66, 0.03) 0% 34.85%, transparent 35% 100%);
   padding-bottom: 60px;
 }
 
@@ -665,24 +662,24 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(70, 70, 80, 0.6);
+  background-color: rgba(170, 170, 180, 0.6);
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   color: $lightBlue;
   text-align: center;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
   a,
   a h6 {
     transition: color 0.5s;
-    text-shadow: 0 0 3px #000;
+    text-shadow: 0 0 3px #fff;
     &:hover h6 {
       color: $amber;
     }
   }
   .portLink {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(255, 255, 255, .6);
     border-radius: 15px;
     height: 125px;
     display: flex;
@@ -749,7 +746,7 @@ main {
 
 .featureItem {
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
   font-size: 0.6rem;
   line-height: 26px;
   width: 200px;
@@ -762,7 +759,7 @@ main {
   cursor: default;
   user-select: none;
   z-index: 1;
-  background-image: linear-gradient(45deg, #666 0 90.5%, transparent 91%);
+  background-image: linear-gradient(45deg, #999 0 90.5%, transparent 91%);
   &::after {
     background-image: linear-gradient(45deg, $lightBlue 0 90.5%, transparent 91%);
     content: "";
@@ -784,7 +781,7 @@ main {
 footer {
   align-items: center;
   bottom: 0;
-  color: #fff;
+  color: #000;
   display: flex;
   font-size: 0.8rem;
   justify-content: center;
@@ -793,7 +790,7 @@ footer {
   text-transform: uppercase;
   width: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
   height: 30px;
   opacity: 0.6;
   padding: 0;
