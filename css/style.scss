@@ -32,6 +32,14 @@ $amber: #e99b36; //        rgba(233,155,54,1.000)
   }
 }
 
+.preload {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -9999;
+  opacity: 0;
+}
+
 html {
   font: 125% $heebo;
 }
@@ -64,11 +72,13 @@ ul {
 h1 {
   color: $lightBlue;
   font-size: 5rem;
+  font-weight: 500;
 }
 
 h2 {
   color: #fff;
   font-size: 4rem;
+  font-weight: 400;
 }
 
 h3 {
@@ -121,7 +131,7 @@ h6 {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
-  min-height: 768;
+  min-height: 768px;
 }
 
 button,
@@ -343,15 +353,26 @@ header {
     margin: 0 10px;
   }
   div:last-child {
-    margin-left: 40px;
-    margin-right: 0px;
+    display: inline-block;
+    opacity: 0;
+    margin-left: 0;
+    margin-right: -20px;
+    width: 0;
+    transition: opacity .5s, margin-left .5s, margin-right .5s, width .5s;
   }
 }
 
 .scrollDownText .socialButtons {
   font-size: 1.4rem;
   padding-top: 4px;
-  margin-top: 0px;
+  margin-top: 0;
+  min-width: 295px;
+  div:last-child {
+    margin-left: 40px;
+    margin-right: 20px;
+    width: unset;
+    opacity: 1
+  }
 }
 
 .headerContainer {
@@ -383,9 +404,10 @@ header {
 .myPicContainer {
   margin-right: 50px;
   position: relative;
+  border-radius: 0 350px 0 0;
+  background-color: $lightBlue;
   img {
-    border-radius: 0 350px 0 0;
-    box-shadow: 0px 20px 0 25px $lightBlue;
+    width: 88%;
   }
 }
 
@@ -498,9 +520,29 @@ main {
     transition: opacity 0.5s;
     &:hover {
       opacity: 0.1;
-      transition: opacity 3.5s 1s;
+      transition: opacity 2s .33s;
     }
   }
+  &:active {
+    background-image: url("../assets/meAvSkeletondoot.png")
+  }
+  &:active+.doot {
+    opacity: 1;
+  }
+}
+
+.doot {
+  position: absolute;
+  left: calc(50% - 664px);
+  background-image: url("../assets/meAvSkeletondoot-horn.png");
+  width: 138px;
+  height: 138px;
+  z-index: 500;
+  top: 396px;
+  background-size: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  pointer-events: none
 }
 
 .about {
@@ -705,7 +747,7 @@ main {
 
 .portText {
   width: calc(100% - 400px);
-  padding: 30px 35px 0;
+  padding: 30px 35px;
   display: flex;
   flex-wrap: wrap;
   h5 {
@@ -716,9 +758,9 @@ main {
   }
   a {
     transition: color 0.5s;
-  }
-  a:not(:hover) {
-    color: $lightBlue;
+    &:not(:hover) {
+      color: $lightBlue;
+    }
   }
 }
 
@@ -793,7 +835,7 @@ footer {
   text-transform: uppercase;
   width: 100%;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #000;
   height: 30px;
   opacity: 0.6;
   padding: 0;

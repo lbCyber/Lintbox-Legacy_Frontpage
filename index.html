@@ -16,9 +16,9 @@
   <a href="#about" class="skipbox button">Skip to main content.</a>
   <a href="#contact" class="skipbox button">Skip to contact form.</a>
   <div class="preload">
-	<img src="./assets/meAvSkeletondoot-horn.png"/>
-	<img src="./assets/meAvSkeletondoot.png"/>
-	<img src="./assets/axologosmile.svg"/>
+    <img src="./assets/meAvSkeletondoot-horn.png" />
+    <img src="./assets/meAvSkeletondoot.png" />
+    <img src="./assets/axologosmile.svg" />
   </div>
   <header>
     <div class="mobileNavButton" aria-hidden>
@@ -101,7 +101,7 @@
         <div class="avContainer paulAv" id="paulAv">
           <img src="./assets/meAv.png" alt="Pixel-art illustration of myself">
         </div>
-		<div class="doot"></div>
+        <div class="doot"></div>
         <div class="sectionText">
           <h5>Hey there!</h5>
           <p>I'm a multi-skilled front-end developer and writer based in Toronto, Canada.</p>
@@ -382,13 +382,13 @@
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://cronus-business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
-                      <h6>View PSD</h6>
+                    <a href="https://github.com/lbCyber/cronus-business" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/cronus-business" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
-                      <h6>View git repo</h6>
+                    <a href="https://cronus-business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
+                      <h6>View PSD</h6>
                     </a>
                   </div>
                 </div>
@@ -406,13 +406,13 @@
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://cronus-business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
-                      <h6>View PSD</h6>
+                    <a href="https://github.com/lbCyber/cronus-business" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
+                      <h6>View git repo</h6>
                     </a>
                   </div>
                   <div class="portLink">
-                    <a href="https://github.com/lbCyber/cronus-business" target="_blank"><i class="fab fa-github-square" aria-hidden></i>
-                      <h6>View git repo</h6>
+                    <a href="https://cronus-business.lintbox.com/psd.jpg" target="_blank"><i class="fas fa-file-image" aria-hidden></i>
+                      <h6>View PSD</h6>
                     </a>
                   </div>
                 </div>
@@ -488,13 +488,15 @@
 <script defer src="./js/main.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function(event) {
-	let d = new Date();
+    let d = new Date();
     document.getElementById("copyright").innerHTML = `Copyright &copy; Paul R - ${d.getFullYear()}`
   })
   const audio = new Audio("./assets/doot.mp3");
   document.getElementById("paulAv").addEventListener("mousedown", () => {
     let w = window.innerWidth;
-    if (w>=1024){ audio.play() }
+    if (w >= 1024) {
+      audio.play()
+    }
   })
 </script>
 

@@ -31,6 +31,10 @@
     }
     .socialButtons {
       order: 0;
+      justify-content: space-around;
+      div:last-child {
+        margin-right: -70px;
+      }
     }
     .scrollDownText .socialButtons {
       padding-top: 8px;
@@ -71,7 +75,7 @@
       letter-spacing: .1rem
     }
   }
-  
+
   @media screen and (max-width:320px) {
     html {
       min-width: 320px;
